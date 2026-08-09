@@ -1,15 +1,63 @@
-# Contribution Guidelines
+# C4-MIRACLE
 
-## 1. Branch Strategy
+C4-MIRACLE adalah aplikasi pendisiplinan berbasis iOS dengan gamifikasi memancing. Pengguna menyelesaikan tugas dan membangun kebiasaan positif untuk mendapatkan reward dalam bentuk progres permainan.
 
-* Semua pekerjaan **harus** dimulai dari branch `main` yang terbaru.
-* Jangan pernah melakukan commit langsung ke `main`.
-* Setiap fitur, bug fix, atau improvement harus dikerjakan pada branch terpisah.
-* Setelah selesai, buat Pull Request untuk dilakukan review.
+---
 
-### Branch Naming
+# Project Structure
 
-Gunakan format berikut:
+```
+C4-MIRACLE
+│
+├── App
+├── Core
+├── Features
+├── Shared
+├── Resources
+├── Targets
+├── Assets.xcassets
+└── README.md
+```
+
+---
+
+# Git Workflow
+
+Semua developer wajib mengikuti workflow berikut.
+
+```
+main
+    │
+    └── feature/<feature-name>
+```
+
+Flow development:
+
+```
+main
+    ↓
+Pull Latest
+    ↓
+Create Feature Branch
+    ↓
+Development
+    ↓
+Commit
+    ↓
+Push
+    ↓
+Pull Request
+    ↓
+Review
+    ↓
+Squash Merge
+```
+
+---
+
+# Branch Naming
+
+Gunakan format berikut.
 
 ```
 feature/<feature-name>
@@ -18,125 +66,319 @@ hotfix/<issue-name>
 release/<version>
 ```
 
-Contoh:
+Contoh
 
 ```
 feature/login
-feature/profile
-bugfix/login-crash
+
+feature/fishing-animation
+
+bugfix/task-crash
+
+hotfix/shield
+
+release/1.0.0
 ```
 
 ---
 
-## 2. Commit Convention
+# Commit Convention
 
-Gunakan format **Conventional Commits**.
-
-Format:
+Gunakan Conventional Commit.
 
 ```
-<type>: <description>
+feat:
+fix:
+refactor:
+style:
+docs:
+test:
+chore:
 ```
 
-Jenis commit yang digunakan:
+Contoh
 
 ```
-feat: add login screen
-fix: resolve login crash
-refactor: simplify network layer
-docs: update README
-test: add login tests
-chore: update dependencies
-style: format source code
+feat: add fishing animation
+
+fix: resolve task loading bug
+
+refactor: simplify task service
 ```
 
-### Aturan
+---
 
-* Gunakan bahasa Indonesia.
-* Gunakan kalimat singkat dan jelas.
-* Fokus pada perubahan utama dalam commit tersebut.
-* Hindari commit seperti:
+# Pull Request
+
+Setiap Pull Request harus menjelaskan:
+
+- Apa yang dikerjakan
+- Screenshot (jika UI berubah)
+- Cara testing
+- Scope perubahan
+
+Checklist:
+
+- [ ] Build Success
+- [ ] Self Review
+- [ ] No Warning
+- [ ] No Merge Conflict
+
+---
+
+# Merge Rules
+
+- Tidak boleh push langsung ke `main`
+- Semua perubahan melalui Pull Request
+- Menggunakan Squash Merge
+- Minimal 1 approval
+- Semua discussion harus selesai sebelum merge
+
+---
+
+# Developer Guidelines
+
+## Architecture
+
+Ikuti struktur project yang sudah ditentukan.
 
 ```
-update
+Core
+Features
+Shared
+Resources
+Targets
+```
+
+Jangan membuat folder baru tanpa diskusi.
+
+---
+
+## Feature
+
+Semua feature berada pada folder `Features`.
+
+Contoh
+
+```
+Features
+├── Home
+├── Tasks
+├── Fishing
+├── ScreenTime
+├── Profile
+└── Settings
+```
+
+Jangan mencampur logic antar feature.
+
+---
+
+## Core
+
+Folder Core hanya berisi reusable code.
+
+Contoh
+
+- Components
+- Services
+- Managers
+- Helpers
+- Extensions
+- DesignSystem
+
+Core tidak boleh bergantung pada Feature.
+
+---
+
+## Shared
+
+Shared digunakan untuk data yang digunakan lebih dari satu target.
+
+Contoh
+
+- Models
+- Constants
+- Extensions
+
+---
+
+# UI / UX Guidelines
+
+Semua UI harus mengikuti Design System.
+
+Jangan menggunakan nilai hardcoded untuk:
+
+- Font
+- Color
+- Spacing
+- Corner Radius
+- Shadow
+- Animation
+
+Gunakan:
+
+```
+AppColors
+AppTypography
+AppSpacing
+AppRadius
+AppShadow
+AppAnimation
+```
+atau nama yang akan disepakati kedepannya
+
+
+---
+
+## Components
+
+Jika suatu UI digunakan lebih dari satu kali, pindahkan ke:
+
+```
+Core/Components
+```
+
+Jangan copy-paste view.
+
+---
+
+## Screen
+
+Setiap screen hanya bertanggung jawab terhadap UI.
+
+Business Logic berada di ViewModel.
+
+---
+
+## Consistency
+
+Semua screen harus memiliki:
+
+- Consistent Padding
+- Consistent Typography
+- Consistent Button Style
+- Consistent Navigation
+
+---
+
+## Accessibility
+
+Developer wajib mempertimbangkan:
+
+- Dynamic Type
+- Dark Mode
+- VoiceOver
+- Minimum Touch Area (44x44)
+
+---
+
+# Asset Guidelines
+
+Asset dibagi menjadi dua kategori.
+
+## Assets.xcassets
+
+Digunakan hanya untuk:
+
+- App Icon
+- Accent Color
+- UI Icons
+- UI Images
+- Colors
+
+Jangan menyimpan sprite gameplay di sini.
+
+---
+
+## Resources
+
+Digunakan untuk:
+
+- Character
+- Fish
+- Boat
+- Environment
+- Effects
+- Audio
+- Fonts
+- Localization
+
+Struktur:
+
+```
+Resources
+├── Assets
+├── Audio
+├── Fonts
+└── Localization
+```
+
+---
+
+## Asset Naming
+
+Gunakan camelCase secara konsisten.
+
+Contoh
+
+```
+fishSalmon
+
+boatDefault
+
+pierMain
+
+characterIdle001
+```
+
+Hindari
+
+```
+gambar1
+
+baru
+
 fix
-done
-123
-test
+
+final
 ```
 
 ---
 
-## 3. Pull Request Guidelines
+# AI Agent Guidelines
 
-Setiap Pull Request harus berisi:
+Developer bebas menggunakan AI Assistant (Cursor, Claude Code, GitHub Copilot, ChatGPT, dll).
 
-### Description
+AI harus:
 
-Jelaskan perubahan yang dilakukan.
+- Mengikuti arsitektur project.
+- Mengikuti Design System.
+- Menggunakan Components yang sudah ada.
+- Mengikuti naming convention.
+- Membuat perubahan sekecil mungkin.
+- Menjaga konsistensi struktur folder.
 
-### Screenshot
+AI tidak boleh:
 
-Wajib jika ada perubahan UI.
+- Mengubah struktur project.
+- Memindahkan file tanpa alasan.
+- Melakukan refactor besar tanpa persetujuan.
+- Menambah dependency tanpa diskusi.
+- Mengubah Design System.
+- Menghapus asset yang tidak berkaitan.
 
-### Testing
-
-Jelaskan bagaimana fitur diuji.
-
-### Checklist
-
-* [ ] Branch sudah di-update dari `main`
-* [ ] Build berhasil
-* [ ] Tidak menambah warning baru
-* [ ] Sudah melakukan self review
-* [ ] Perubahan hanya mencakup scope yang dikerjakan
-
-### Review
-
-Developer tidak diperbolehkan merge branch sendiri ke `main`.
-
-Semua Pull Request harus melalui proses review dan approval.
+AI adalah alat bantu implementasi, bukan pengambil keputusan arsitektur.
 
 ---
 
-## 4. Merge Rules
+# Future Targets
 
-Repository menggunakan workflow Pull Request.
+Project ini dirancang untuk mendukung beberapa target Apple.
 
-Aturan merge:
+- Main App
+- Widget Extension
+- Live Activity
+- Screen Time Shield
 
-* Tidak boleh push langsung ke `main`.
-* Semua perubahan harus melalui Pull Request.
-* Pull Request harus di-review sebelum di-merge.
-* Gunakan **Squash Merge** agar riwayat commit tetap bersih.
-* Jika terdapat merge conflict, conflict harus diselesaikan sebelum proses merge.
-* Setelah merge berhasil, branch feature dapat dihapus.
-
----
-
-## 5. AI Agent Guidelines
-
-Developer bebas menggunakan AI Assistant seperti ChatGPT, GitHub Copilot, Cursor, Claude Code, Windsurf, atau tools lainnya. Namun AI **tidak boleh** mengubah struktur proyek di luar kebutuhan task yang sedang dikerjakan.
-
-### AI Agent harus:
-
-* Mengikuti arsitektur dan coding style yang sudah ada.
-* Menggunakan naming convention yang telah digunakan dalam project.
-* Menambahkan file baru hanya jika memang diperlukan.
-* Menempatkan file baru pada folder yang sesuai dengan struktur project.
-* Menjaga konsistensi dependency injection, folder structure, dan module boundaries.
-* Membuat perubahan sekecil mungkin sesuai scope task.
-* Menghasilkan kode yang mudah dibaca dan mudah dipelihara.
-
-### AI Agent tidak boleh:
-
-* Memindahkan file tanpa alasan yang jelas.
-* Mengubah struktur folder secara sepihak.
-* Melakukan refactor besar ketika hanya diminta memperbaiki bug kecil.
-* Mengganti arsitektur project tanpa persetujuan tim.
-* Mengubah naming convention yang sudah digunakan.
-* Menambahkan library atau dependency baru tanpa diskusi dan persetujuan tim.
-* Menghapus kode, file, atau resource yang tidak berkaitan dengan task.
-
-> **Principle:** AI adalah alat bantu implementasi, bukan pengambil keputusan arsitektur. Semua perubahan yang memengaruhi struktur project, arsitektur, atau pola pengembangan harus melalui persetujuan tim.
-
+Semua target harus mengikuti Design System dan menggunakan Shared Module bila memungkinkan.

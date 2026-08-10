@@ -86,7 +86,7 @@ struct BreakLiveActivity: Widget {
                         Text("Start Work").font(.caption2).foregroundStyle(.secondary)
                         Spacer()
                         Text(isOver(context) ? "\(context.attributes.appName) is blocked again"
-                                             : context.state.contextNote)
+                                             : context.state.nextTask)
                             .font(.caption2)
                             .foregroundStyle(.secondary)
                             .lineLimit(1)
@@ -127,8 +127,8 @@ struct BreakLiveActivity: Widget {
                          ? "Break's over — \(context.attributes.appName)"
                          : "Break — \(context.attributes.appName)")
                         .font(.subheadline.weight(.semibold))
-                    if !context.state.contextNote.isEmpty {
-                        Text(context.state.contextNote)
+                    if !context.state.nextTask.isEmpty {
+                        Text(context.state.nextTask)
                             .font(.caption)
                             .foregroundStyle(.secondary)
                             .lineLimit(1)

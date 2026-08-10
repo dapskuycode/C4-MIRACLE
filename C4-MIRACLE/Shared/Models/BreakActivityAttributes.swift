@@ -24,7 +24,7 @@ struct BreakActivityAttributes: ActivityAttributes {
     struct ContentState: Codable, Hashable {
         var startedAt: Date
         var endsAt: Date
-        var contextNote: String
+        var nextTask: String
         /// Once true the activity stops counting down and offers the two choices instead.
         /// It deliberately stays on screen rather than ending: this is the only surface that
         /// reliably reaches the user when a break runs out.

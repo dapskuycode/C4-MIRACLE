@@ -125,14 +125,14 @@ final class AppState: ObservableObject {
     // while the shield had in fact been lifted correctly.
 
     /// Phase 1 — persist, lift the shield, start the Live Activity. No app launching here.
-    func commitBreak(request: BreakRequest, seconds: Int, context: String) {
-        let grant = BreakGrant(request: request, durationSeconds: seconds, contextNote: context)
+    func commitBreak(request: BreakRequest, seconds: Int, nextTask: String) {
+        let grant = BreakGrant(request: request, durationSeconds: seconds, nextTask: nextTask)
 
         ScreenTimeService.shared.grantBreak(grant)
         SharedStore.clearPendingRequest()
         SharedStore.log(
             "App",
-            "SAVED break — app: \(grant.appName), duration: \(BreakDurations.label(seconds)), context: \"\(context)\""
+            "SAVED break — app: \(grant.appName), duration: \(BreakDurations.label(seconds)), next task: \"\(nextTask)\""
         )
 
         activeGrant = grant

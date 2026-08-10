@@ -492,7 +492,7 @@ final class ScreenTimeService: ObservableObject {
     /// Resumes blocking. Called when the user picks "Start Work" — never automatically.
     func resumeWork(reason: String) {
         SharedStore.breakEnded = nil
-        SharedStore.clearActiveGrant()
+        SharedStore.clearActiveGrant(outcome: .returnedToWork)
         LiveActivityService.end(from: "App")
         UNUserNotificationCenter.current()
             .removePendingNotificationRequests(withIdentifiers: [Self.expiryNotificationID])
@@ -515,7 +515,7 @@ final class ScreenTimeService: ObservableObject {
                 durationSeconds: grant.durationSeconds
             )
         }
-        SharedStore.clearActiveGrant()
+        SharedStore.clearActiveGrant(outcome: expired ? .expired : .endedEarly)
         UNUserNotificationCenter.current()
             .removePendingNotificationRequests(withIdentifiers: [Self.expiryNotificationID])
         center.stopMonitoring([.breakWindow])

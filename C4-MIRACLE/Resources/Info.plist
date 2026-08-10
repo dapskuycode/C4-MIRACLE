@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+	  Partial Info.plist. GENERATE_INFOPLIST_FILE stays YES, so Xcode merges its generated
+	  keys (orientation, launch screen, scene manifest) into this file at build time.
+
+	  Only keys that cannot be expressed as an INFOPLIST_KEY_* build setting live here:
+	  CFBundleURLTypes is an array of dictionaries, which that mechanism cannot produce.
+	-->
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.berzki.Miracle</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<!-- Must match AppGroup.urlScheme. The Live Activity deep links use it. -->
+				<string>miracle</string>
+			</array>
+		</dict>
+	</array>
+
+	<!--
+	  Only needed for canOpenURL, which AppLaunchService deliberately does not use —
+	  UIApplication.open needs no declaration and reports success in its completion handler.
+	  Kept because it also makes the schemes visible to anyone auditing the build.
+	-->
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>instagram</string>
+		<string>tiktok</string>
+		<string>youtube</string>
+		<string>twitter</string>
+		<string>fb</string>
+		<string>reddit</string>
+		<string>snapchat</string>
+		<string>whatsapp</string>
+		<string>nflx</string>
+		<string>spotify</string>
+		<string>shopeeid</string>
+		<string>tokopedia</string>
+		<string>shortcuts</string>
+	</array>
+
+	<key>NSSupportsLiveActivities</key>
+	<true/>
+</dict>
+</plist>

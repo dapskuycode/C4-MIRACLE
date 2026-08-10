@@ -37,6 +37,20 @@ struct BreakRequest: Codable, Equatable, Identifiable {
     var requestedAt: Date = Date()
 }
 
+/// How a break came to an end. Recorded when the grant is archived, because that is the only
+/// moment all three outcomes are distinguishable — afterwards the grant is gone.
+enum BreakOutcome: String, Codable {
+    /// The user chose to go back to work while the break was still running.
+    case returnedToWork
+    /// The user ended the break early from inside the app.
+    case endedEarly
+    /// The break ran out on its own and the user never came back to close it.
+    case expired
+
+    /// Whether the user closed the loop themselves.
+    var isCommitted: Bool { self != .expired }
+}
+
 /// Written when the user confirms a break. This is the record that unlocks the apps.
 struct BreakGrant: Codable, Equatable, Identifiable {
     var id: UUID = UUID()
@@ -44,19 +58,22 @@ struct BreakGrant: Codable, Equatable, Identifiable {
     var appTokenKey: String?
     var appBundleID: String?
     var durationSeconds: Int
-    var contextNote: String
+    /// What the user plans to do once the break is over. Written on the break screen.
+    var nextTask: String
     var grantedAt: Date
     var expiresAt: Date
+    /// Set only when the grant is archived into the history.
+    var outcome: BreakOutcome?
 
     var isActive: Bool { Date() < expiresAt }
     var remaining: TimeInterval { max(0, expiresAt.timeIntervalSinceNow) }
 
-    init(request: BreakRequest, durationSeconds: Int, contextNote: String, now: Date = Date()) {
+    init(request: BreakRequest, durationSeconds: Int, nextTask: String, now: Date = Date()) {
         self.appName = request.appName
         self.appTokenKey = request.appTokenKey
         self.appBundleID = request.appBundleID
         self.durationSeconds = durationSeconds
-        self.contextNote = contextNote
+        self.nextTask = nextTask
         self.grantedAt = now
         self.expiresAt = now.addingTimeInterval(TimeInterval(durationSeconds))
     }

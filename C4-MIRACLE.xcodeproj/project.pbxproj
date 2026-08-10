@@ -6,911 +6,195 @@
 	objectVersion = 77;
 	objects = {
 
-		FF6CD33DC2C9429819584DC0 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppState.swift"; sourceTree = "<group>"; };
-		FFE55EC018CDE13401129EC2 /* MiracleAppShortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MiracleAppShortcuts.swift"; sourceTree = "<group>"; };
-		FFDE15DE3D90FD687A004EC8 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootView.swift"; sourceTree = "<group>"; };
-		FF16B767504B1756DCA75B66 /* CapabilityBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CapabilityBadge.swift"; sourceTree = "<group>"; };
-		FFFC52DE53E27C181C8E8070 /* AppLaunchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppLaunchService.swift"; sourceTree = "<group>"; };
-		FF705EC096197FFE911D0550 /* ScreenTimeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScreenTimeService.swift"; sourceTree = "<group>"; };
-		FF090F77BC3166E1CCA182C1 /* WorkModeIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkModeIntents.swift"; sourceTree = "<group>"; };
-		FFAB12437EE2A6D67E0A4AFB /* BreakConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BreakConfigView.swift"; sourceTree = "<group>"; };
-		FFE8876D89DCAB14AB26ECC7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingView.swift"; sourceTree = "<group>"; };
-		FF51B21F5640E82CA331610B /* PermissionSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PermissionSetupView.swift"; sourceTree = "<group>"; };
-		FFDC9F22A43F165D2FC1E4DF /* WorkModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkModeView.swift"; sourceTree = "<group>"; };
-		FFF042F0A275E3ACFD0E008F /* DiagnosticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiagnosticsView.swift"; sourceTree = "<group>"; };
-		FF002181C22D86EFACCBC3AB /* C4-MIRACLE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "C4-MIRACLE.entitlements"; sourceTree = "<group>"; };
-		FF22C6606F663CBC5699A3DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info.plist"; sourceTree = "<group>"; };
-		FEB903C99E4DC6FCBC2B1B2B /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppGroup.swift"; sourceTree = "<group>"; };
-		FE34C638D044D022E8178B1E /* BreakDurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BreakDurations.swift"; sourceTree = "<group>"; };
-		FEC85C3C10CA79A822222CD2 /* DeviceActivityNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceActivityNames.swift"; sourceTree = "<group>"; };
-		FE5FF6EA78DFEAA95C04B879 /* BreakControlIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BreakControlIntents.swift"; sourceTree = "<group>"; };
-		FEC0BF577A8DBB7500349788 /* BreakActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BreakActivityAttributes.swift"; sourceTree = "<group>"; };
-		FE35F6228F4DAD7D8BB4D954 /* BreakModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BreakModels.swift"; sourceTree = "<group>"; };
-		FE69C135D78D4B42ADBAADC6 /* LiveActivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LiveActivityService.swift"; sourceTree = "<group>"; };
-		FEFF55D67DEE5FEE00A402B8 /* SharedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SharedStore.swift"; sourceTree = "<group>"; };
-		FE1D114053AF6A2D8B9C618B /* TokenBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TokenBox.swift"; sourceTree = "<group>"; };
-		FEC7EB872EE48BBFC7332022 /* DeviceActivityMonitorExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "DeviceActivityMonitorExtension.entitlements"; sourceTree = "<group>"; };
-		FECF66D6C044169BBFDEA22F /* DeviceActivityMonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceActivityMonitorExtension.swift"; sourceTree = "<group>"; };
-		FED1DDBFD41D0D00CDFCDAF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info.plist"; sourceTree = "<group>"; };
-		FEDE0B95A1DFC9095799CEA9 /* BreakLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BreakLiveActivity.swift"; sourceTree = "<group>"; };
-		FE9845B166399EBE9B631C74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info.plist"; sourceTree = "<group>"; };
-		FE50F6B41C38A7B80C900D6D /* MiracleLiveActivity.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MiracleLiveActivity.entitlements"; sourceTree = "<group>"; };
-		FEE22965A272C4FD0B0BCB27 /* MiracleLiveActivityBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MiracleLiveActivityBundle.swift"; sourceTree = "<group>"; };
-		FE5B3DE0F5D5F941FB2C3068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info.plist"; sourceTree = "<group>"; };
-		FE236C6733648851D3E79405 /* ShieldActionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ShieldActionExtension.entitlements"; sourceTree = "<group>"; };
-		FEF680208A58BD4D75E2B212 /* ShieldActionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShieldActionExtension.swift"; sourceTree = "<group>"; };
-		FEDDF5B5AC3B76416CE4627F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Media.xcassets"; sourceTree = "<group>"; };
-		FFB31DF45DE340F630AED954 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "README.md"; sourceTree = "<group>"; };
-		FEFC373B51D3ED481260B83D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info.plist"; sourceTree = "<group>"; };
-		FEADA30AA8A90DC155DBDC39 /* ShieldConfigurationExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ShieldConfigurationExtension.entitlements"; sourceTree = "<group>"; };
-		FE5DE16BB893DD2B07B49BBF /* ShieldConfigurationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShieldConfigurationExtension.swift"; sourceTree = "<group>"; };
-		FF4C8A8DA75514EC1DEE3438 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets.xcassets"; sourceTree = "<group>"; };
-		FFC64688C203866ADAD83281 /* C4_MIRACLEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "C4_MIRACLEApp.swift"; sourceTree = "<group>"; };
-		FF307C36D49B8E75B980DE0B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "README.md"; sourceTree = "<group>"; };
-		FFA9E7A16C965B37D0C13639 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6CD33DC2C9429819584DC0 /* AppState.swift */; };
-		FF8490293B6F7011867C9410 /* MiracleAppShortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE55EC018CDE13401129EC2 /* MiracleAppShortcuts.swift */; };
-		FFD7C7B9335520FFB80E3B6D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDE15DE3D90FD687A004EC8 /* RootView.swift */; };
-		FFA0719DE76E706721878A39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF4C8A8DA75514EC1DEE3438 /* Assets.xcassets */; };
-		FFF2B6B53371F92B31AF7052 /* C4_MIRACLEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC64688C203866ADAD83281 /* C4_MIRACLEApp.swift */; };
-		FF6D04F06BB52FF347607214 /* CapabilityBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF16B767504B1756DCA75B66 /* CapabilityBadge.swift */; };
-		FF9CD83C86BC7EDB0C416544 /* AppLaunchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFC52DE53E27C181C8E8070 /* AppLaunchService.swift */; };
+/* Begin PBXBuildFile section */
+		F93D2CA13029AA51001F548E /* PandiParker.icon in Resources */ = {isa = PBXBuildFile; fileRef = F93D2CA03029AA51001F548E /* PandiParker.icon */; };
+		F99148603029D5ED005D413C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991485F3029D5ED005D413C /* ProfileView.swift */; };
+		FC3DF2E8E71D76FEB3C8E5B7 /* DailyRecap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC506E5EBC3FF51DF20119EA /* DailyRecap.swift */; };
+		FCB2E4B09B983FF431F6B790 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9A3E2874A78171D366948 /* HomeView.swift */; };
+		FD3C16F4709617D0A9F571C3 /* BrandColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD69F6486A4FED83AD50B7E6 /* BrandColors.swift */; };
+		FD4CB10E0EA1D6C2FD791C23 /* BrandColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD69F6486A4FED83AD50B7E6 /* BrandColors.swift */; };
+		FDB54F5713BEEBC5F676E09C /* BrandColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD69F6486A4FED83AD50B7E6 /* BrandColors.swift */; };
+		FDE15B1409F5836C7F23FC9C /* BrandColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD69F6486A4FED83AD50B7E6 /* BrandColors.swift */; };
+		FDF68A77876038DAF9BF636C /* BrandColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD69F6486A4FED83AD50B7E6 /* BrandColors.swift */; };
+		FE0A6957288CAFD20FBEC0CE /* ShieldConfigurationExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FE6C8F1F2A8D7424FA0DBEEE /* ShieldConfigurationExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FE0D4DA44E98FE46DB1A6F3F /* BreakDurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE34C638D044D022E8178B1E /* BreakDurations.swift */; };
+		FE191621850E677692FDE7FF /* ShieldActionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF680208A58BD4D75E2B212 /* ShieldActionExtension.swift */; };
+		FE1A36CFDB33B3CB3685EC8E /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB903C99E4DC6FCBC2B1B2B /* AppGroup.swift */; };
+		FE27B32934963619B0FC40EA /* MiracleLiveActivityBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE22965A272C4FD0B0BCB27 /* MiracleLiveActivityBundle.swift */; };
+		FE30D3948D77ABDC432A0BC1 /* DeviceActivityNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC85C3C10CA79A822222CD2 /* DeviceActivityNames.swift */; };
+		FE34D2981DB58CB05A297E9E /* BreakDurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE34C638D044D022E8178B1E /* BreakDurations.swift */; };
+		FE3EA4099F3DB1EB47B1971F /* LiveActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C135D78D4B42ADBAADC6 /* LiveActivityService.swift */; };
+		FE3ED6766E8F43149C2B1F18 /* BreakLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDE0B95A1DFC9095799CEA9 /* BreakLiveActivity.swift */; };
+		FE3F8488AD50B3EFDF2ECCDB /* BreakModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE35F6228F4DAD7D8BB4D954 /* BreakModels.swift */; };
+		FE425D49159A7EBCB4918031 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEDDF5B5AC3B76416CE4627F /* Media.xcassets */; };
+		FE428928BCEFB812804E1778 /* BreakControlIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5FF6EA78DFEAA95C04B879 /* BreakControlIntents.swift */; };
+		FE42EA19B9A8F7F1362BB76A /* BreakModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE35F6228F4DAD7D8BB4D954 /* BreakModels.swift */; };
+		FE45C2751CBF1550A5E4429F /* BreakActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC0BF577A8DBB7500349788 /* BreakActivityAttributes.swift */; };
+		FE46BA1AE82730D3EC66E3D5 /* BreakActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC0BF577A8DBB7500349788 /* BreakActivityAttributes.swift */; };
+		FE4A77DCF7C59448CF416B9A /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB903C99E4DC6FCBC2B1B2B /* AppGroup.swift */; };
+		FE52617BBA39DF5840D859CE /* LiveActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C135D78D4B42ADBAADC6 /* LiveActivityService.swift */; };
+		FE5A72F20883B3FF8362AF16 /* BreakDurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE34C638D044D022E8178B1E /* BreakDurations.swift */; };
+		FE5ECC6FDD020B0D6F8CE42D /* DeviceActivityNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC85C3C10CA79A822222CD2 /* DeviceActivityNames.swift */; };
+		FE6272DBC108D0F3283CF6FA /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFF55D67DEE5FEE00A402B8 /* SharedStore.swift */; };
+		FE652043396EB01785443F96 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB903C99E4DC6FCBC2B1B2B /* AppGroup.swift */; };
+		FE66DA10A3DA429A3E3F87AE /* TokenBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D114053AF6A2D8B9C618B /* TokenBox.swift */; };
+		FE6AF71D607D52A6C2B8E2C9 /* TokenBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D114053AF6A2D8B9C618B /* TokenBox.swift */; };
+		FE7307B93FB631FBAAF46252 /* BreakModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE35F6228F4DAD7D8BB4D954 /* BreakModels.swift */; };
+		FE8D17C8454D2832F0841614 /* BreakDurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE34C638D044D022E8178B1E /* BreakDurations.swift */; };
+		FE92644C7B160ACEAAD70207 /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5DE16BB893DD2B07B49BBF /* ShieldConfigurationExtension.swift */; };
+		FEA79964F895C2028480953A /* DeviceActivityNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC85C3C10CA79A822222CD2 /* DeviceActivityNames.swift */; };
+		FEB2831F7A5415F89A589D99 /* TokenBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D114053AF6A2D8B9C618B /* TokenBox.swift */; };
+		FEBA08C520FA87EF64FDC5B1 /* MiracleLiveActivity.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FE4F8E28698A30F59259B9D6 /* MiracleLiveActivity.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FEBBABBEA3EC06914F6CA0E6 /* BreakActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC0BF577A8DBB7500349788 /* BreakActivityAttributes.swift */; };
+		FEC7D86FDE84542674250BFD /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFF55D67DEE5FEE00A402B8 /* SharedStore.swift */; };
+		FECA891A52D3FE338F3067D9 /* BreakModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE35F6228F4DAD7D8BB4D954 /* BreakModels.swift */; };
+		FED5AC37FF106027D868E093 /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFF55D67DEE5FEE00A402B8 /* SharedStore.swift */; };
+		FEDB59753D98FC8A3573F143 /* LiveActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C135D78D4B42ADBAADC6 /* LiveActivityService.swift */; };
+		FEEA40827EFAB7D34B29AFEE /* DeviceActivityMonitorExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FE7DF867ABE9FAECFF93263F /* DeviceActivityMonitorExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FEEEC46C58B8391016D1E500 /* TokenBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D114053AF6A2D8B9C618B /* TokenBox.swift */; };
+		FEEF0690D3D6D6A388DD6A26 /* BreakActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC0BF577A8DBB7500349788 /* BreakActivityAttributes.swift */; };
+		FEEFF4CB0F92AD7185827652 /* LiveActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C135D78D4B42ADBAADC6 /* LiveActivityService.swift */; };
+		FEF43554554562F54EAB4C49 /* DeviceActivityNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC85C3C10CA79A822222CD2 /* DeviceActivityNames.swift */; };
+		FEFAF03B1ED148560C600B9F /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB903C99E4DC6FCBC2B1B2B /* AppGroup.swift */; };
+		FEFE8484257153C239C6527A /* ShieldActionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FEE7913A6680398500FFF352 /* ShieldActionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FEFEC2D223DD04231317DF1C /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFF55D67DEE5FEE00A402B8 /* SharedStore.swift */; };
+		FEFEFCA61254891430155C1E /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECF66D6C044169BBFDEA22F /* DeviceActivityMonitorExtension.swift */; };
+		FF1A2955A4B0F8C5DE934217 /* TokenBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D114053AF6A2D8B9C618B /* TokenBox.swift */; };
+		FF205BD00076C74F29D94CBF /* BreakDurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE34C638D044D022E8178B1E /* BreakDurations.swift */; };
+		FF2C908D3FA8B616FDA3E60C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE8876D89DCAB14AB26ECC7 /* OnboardingView.swift */; };
+		FF3B4E2397CE1D35D93F3802 /* WorkModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDC9F22A43F165D2FC1E4DF /* WorkModeView.swift */; };
+		FF5991DA0309269D8C4AE93F /* BreakActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC0BF577A8DBB7500349788 /* BreakActivityAttributes.swift */; };
 		FF5A5F8CC85E97B9EABC0B74 /* ScreenTimeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF705EC096197FFE911D0550 /* ScreenTimeService.swift */; };
+		FF667833C89FA786E227D50B /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB903C99E4DC6FCBC2B1B2B /* AppGroup.swift */; };
+		FF6D04F06BB52FF347607214 /* CapabilityBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF16B767504B1756DCA75B66 /* CapabilityBadge.swift */; };
+		FF732AABE80937C011AE1A9F /* BreakControlIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5FF6EA78DFEAA95C04B879 /* BreakControlIntents.swift */; };
+		FF8490293B6F7011867C9410 /* MiracleAppShortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE55EC018CDE13401129EC2 /* MiracleAppShortcuts.swift */; };
+		FF88776D19D201B05C4BC26F /* LiveActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C135D78D4B42ADBAADC6 /* LiveActivityService.swift */; };
+		FF9CD83C86BC7EDB0C416544 /* AppLaunchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFC52DE53E27C181C8E8070 /* AppLaunchService.swift */; };
+		FFA0719DE76E706721878A39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF4C8A8DA75514EC1DEE3438 /* Assets.xcassets */; };
+		FFA9E7A16C965B37D0C13639 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6CD33DC2C9429819584DC0 /* AppState.swift */; };
 		FFB8C4596333C0A909E323B8 /* WorkModeIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF090F77BC3166E1CCA182C1 /* WorkModeIntents.swift */; };
 		FFC6D1B9A6EFE919D9DFC5AC /* BreakConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAB12437EE2A6D67E0A4AFB /* BreakConfigView.swift */; };
-		FF2C908D3FA8B616FDA3E60C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE8876D89DCAB14AB26ECC7 /* OnboardingView.swift */; };
-		FFDE214FF3045188C9BFAFED /* PermissionSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF51B21F5640E82CA331610B /* PermissionSetupView.swift */; };
-		FF3B4E2397CE1D35D93F3802 /* WorkModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDC9F22A43F165D2FC1E4DF /* WorkModeView.swift */; };
-		FFF0CD8BDF273E6C6C4F0B25 /* DiagnosticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF042F0A275E3ACFD0E008F /* DiagnosticsView.swift */; };
-		FF667833C89FA786E227D50B /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB903C99E4DC6FCBC2B1B2B /* AppGroup.swift */; };
-		FF205BD00076C74F29D94CBF /* BreakDurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE34C638D044D022E8178B1E /* BreakDurations.swift */; };
-		FFDE1D6B09FB8E734F99E7AE /* DeviceActivityNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC85C3C10CA79A822222CD2 /* DeviceActivityNames.swift */; };
-		FF732AABE80937C011AE1A9F /* BreakControlIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5FF6EA78DFEAA95C04B879 /* BreakControlIntents.swift */; };
-		FF5991DA0309269D8C4AE93F /* BreakActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC0BF577A8DBB7500349788 /* BreakActivityAttributes.swift */; };
-		FFCC938AA38BA9FDE0BD361C /* BreakModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE35F6228F4DAD7D8BB4D954 /* BreakModels.swift */; };
-		FF88776D19D201B05C4BC26F /* LiveActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C135D78D4B42ADBAADC6 /* LiveActivityService.swift */; };
 		FFC92CCAF59D84E8377C9341 /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFF55D67DEE5FEE00A402B8 /* SharedStore.swift */; };
-		FF1A2955A4B0F8C5DE934217 /* TokenBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D114053AF6A2D8B9C618B /* TokenBox.swift */; };
-		FFD0FFA645865648B8DE5F02 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				FF6CD33DC2C9429819584DC0 /* AppState.swift */,
-				FFE55EC018CDE13401129EC2 /* MiracleAppShortcuts.swift */,
-				FFDE15DE3D90FD687A004EC8 /* RootView.swift */,
-			);
-			path = "App";
-			sourceTree = "<group>";
-		};
-		FFE2B3FD500442859590CBAC /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				FF16B767504B1756DCA75B66 /* CapabilityBadge.swift */,
-			);
-			path = "Components";
-			sourceTree = "<group>";
-		};
-		FF4DCC7DFB1432B388B713A4 /* Animation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Animation";
-			sourceTree = "<group>";
-		};
-		FF9D63F942DF0302EF212950 /* Colors */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Colors";
-			sourceTree = "<group>";
-		};
-		FFF07D5DAA0590FE45E5919F /* Radius */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Radius";
-			sourceTree = "<group>";
-		};
-		FF5B2E9A840A75005D8948C0 /* Shadow */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Shadow";
-			sourceTree = "<group>";
-		};
-		FFAE6E09B5826E0D82C243CD /* Spacing */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Spacing";
-			sourceTree = "<group>";
-		};
-		FFD4423880C6F72747DB2918 /* Typography */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Typography";
-			sourceTree = "<group>";
-		};
-		FFAD0E44C858749305DFEE8A /* DesignSystem */ = {
-			isa = PBXGroup;
-			children = (
-				FF4DCC7DFB1432B388B713A4 /* Animation */,
-				FF9D63F942DF0302EF212950 /* Colors */,
-				FFF07D5DAA0590FE45E5919F /* Radius */,
-				FF5B2E9A840A75005D8948C0 /* Shadow */,
-				FFAE6E09B5826E0D82C243CD /* Spacing */,
-				FFD4423880C6F72747DB2918 /* Typography */,
-			);
-			path = "DesignSystem";
-			sourceTree = "<group>";
-		};
-		FFC2BD0EFAAF02073141CC99 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Extensions";
-			sourceTree = "<group>";
-		};
-		FF1F87AD8576C9DD7E5577DD /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Helpers";
-			sourceTree = "<group>";
-		};
-		FF26B35BC86B1E9D1BA93FB0 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Managers";
-			sourceTree = "<group>";
-		};
-		FF7DAED697FBE775F9B2541C /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Models";
-			sourceTree = "<group>";
-		};
-		FF334907327C76183D4B9BA2 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				FFFC52DE53E27C181C8E8070 /* AppLaunchService.swift */,
-				FF705EC096197FFE911D0550 /* ScreenTimeService.swift */,
-			);
-			path = "Services";
-			sourceTree = "<group>";
-		};
-		FFBEEDFE83FB85F0577839B3 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Utilities";
-			sourceTree = "<group>";
-		};
-		FFE1E8AB37C9A152BC94542A /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				FFE2B3FD500442859590CBAC /* Components */,
-				FFAD0E44C858749305DFEE8A /* DesignSystem */,
-				FFC2BD0EFAAF02073141CC99 /* Extensions */,
-				FF1F87AD8576C9DD7E5577DD /* Helpers */,
-				FF26B35BC86B1E9D1BA93FB0 /* Managers */,
-				FF7DAED697FBE775F9B2541C /* Models */,
-				FF334907327C76183D4B9BA2 /* Services */,
-				FFBEEDFE83FB85F0577839B3 /* Utilities */,
-			);
-			path = "Core";
-			sourceTree = "<group>";
-		};
-		FFFE99B9FABD69DA27D5F0A9 /* Fishing */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Fishing";
-			sourceTree = "<group>";
-		};
-		FFB91E9DD7595F2F8A481F97 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Home";
-			sourceTree = "<group>";
-		};
-		FF7C6F313A69A102A8217A1A /* Inventory */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Inventory";
-			sourceTree = "<group>";
-		};
-		FF9EB51B5A10BE179D5D9A0D /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Profile";
-			sourceTree = "<group>";
-		};
-		FF790C4FD9DE56D26B566BD5 /* Intents */ = {
-			isa = PBXGroup;
-			children = (
-				FF090F77BC3166E1CCA182C1 /* WorkModeIntents.swift */,
-			);
-			path = "Intents";
-			sourceTree = "<group>";
-		};
-		FF21FF5C9A7B7061450D6A36 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				FFAB12437EE2A6D67E0A4AFB /* BreakConfigView.swift */,
-				FFE8876D89DCAB14AB26ECC7 /* OnboardingView.swift */,
-				FF51B21F5640E82CA331610B /* PermissionSetupView.swift */,
-				FFDC9F22A43F165D2FC1E4DF /* WorkModeView.swift */,
-			);
-			path = "Views";
-			sourceTree = "<group>";
-		};
-		FFF2557ACBE2D22EBAA68138 /* ScreenTime */ = {
-			isa = PBXGroup;
-			children = (
-				FF790C4FD9DE56D26B566BD5 /* Intents */,
-				FF21FF5C9A7B7061450D6A36 /* Views */,
-			);
-			path = "ScreenTime";
-			sourceTree = "<group>";
-		};
-		FF3E6D6A8EF110E2C2655952 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				FFF042F0A275E3ACFD0E008F /* DiagnosticsView.swift */,
-			);
-			path = "Views";
-			sourceTree = "<group>";
-		};
-		FF1D48569E08CED9AE12C689 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				FF3E6D6A8EF110E2C2655952 /* Views */,
-			);
-			path = "Settings";
-			sourceTree = "<group>";
-		};
-		FF99446392EF2D30FA304802 /* Task */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Task";
-			sourceTree = "<group>";
-		};
-		FFE3B3A746B90ACF7EB921E8 /* Features */ = {
-			isa = PBXGroup;
-			children = (
-				FFFE99B9FABD69DA27D5F0A9 /* Fishing */,
-				FFB91E9DD7595F2F8A481F97 /* Home */,
-				FF7C6F313A69A102A8217A1A /* Inventory */,
-				FF9EB51B5A10BE179D5D9A0D /* Profile */,
-				FFF2557ACBE2D22EBAA68138 /* ScreenTime */,
-				FF1D48569E08CED9AE12C689 /* Settings */,
-				FF99446392EF2D30FA304802 /* Task */,
-			);
-			path = "Features";
-			sourceTree = "<group>";
-		};
-		FF7B19DF975D93F357329CB6 /* Boat */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Boat";
-			sourceTree = "<group>";
-		};
-		FF0FA334FFEBFDE8D74C24D4 /* Expressions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Expressions";
-			sourceTree = "<group>";
-		};
-		FFD4AF1144E663391A670FBC /* Failed */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Failed";
-			sourceTree = "<group>";
-		};
-		FF429E3F5031969AC331C138 /* Fishing */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Fishing";
-			sourceTree = "<group>";
-		};
-		FFDDF1FB64A6DCDDE4872498 /* Idle */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Idle";
-			sourceTree = "<group>";
-		};
-		FF850514BBEEA7F34566D89D /* Success */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Success";
-			sourceTree = "<group>";
-		};
-		FF1182EA2008C0102A1985D3 /* Character */ = {
-			isa = PBXGroup;
-			children = (
-				FF0FA334FFEBFDE8D74C24D4 /* Expressions */,
-				FFD4AF1144E663391A670FBC /* Failed */,
-				FF429E3F5031969AC331C138 /* Fishing */,
-				FFDDF1FB64A6DCDDE4872498 /* Idle */,
-				FF850514BBEEA7F34566D89D /* Success */,
-			);
-			path = "Character";
-			sourceTree = "<group>";
-		};
-		FF4B3FB5AECC2D001B67F0B5 /* Effects */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Effects";
-			sourceTree = "<group>";
-		};
-		FFCFB1CE34CA517FAA61BFEC /* Pier */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Pier";
-			sourceTree = "<group>";
-		};
-		FFF9FFAAD9E36262FABB1E35 /* Sea */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Sea";
-			sourceTree = "<group>";
-		};
-		FFD35AD24DAA9C642895DC4A /* Sky */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Sky";
-			sourceTree = "<group>";
-		};
-		FFC8A0A6CEBCA7B2DE9EBAB5 /* Environment */ = {
-			isa = PBXGroup;
-			children = (
-				FFCFB1CE34CA517FAA61BFEC /* Pier */,
-				FFF9FFAAD9E36262FABB1E35 /* Sea */,
-				FFD35AD24DAA9C642895DC4A /* Sky */,
-			);
-			path = "Environment";
-			sourceTree = "<group>";
-		};
-		FF21B24E72CD9719DAF6C219 /* Fish */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Fish";
-			sourceTree = "<group>";
-		};
-		FFD94B536EC7A66A3DBDF80A /* UI */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "UI";
-			sourceTree = "<group>";
-		};
-		FF9E483C5D02111B1B0F25CB /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				FF7B19DF975D93F357329CB6 /* Boat */,
-				FF1182EA2008C0102A1985D3 /* Character */,
-				FF4B3FB5AECC2D001B67F0B5 /* Effects */,
-				FFC8A0A6CEBCA7B2DE9EBAB5 /* Environment */,
-				FF21B24E72CD9719DAF6C219 /* Fish */,
-				FFD94B536EC7A66A3DBDF80A /* UI */,
-			);
-			path = "Assets";
-			sourceTree = "<group>";
-		};
-		FF3EA78E43A029F7D914845B /* BGM */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "BGM";
-			sourceTree = "<group>";
-		};
-		FFD5F33DB0A90F4D326A2FE2 /* SFX */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "SFX";
-			sourceTree = "<group>";
-		};
-		FFADC7D9DDBF288023CD2828 /* Voice */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Voice";
-			sourceTree = "<group>";
-		};
-		FF38D5CB583D006629297B3C /* Audio */ = {
-			isa = PBXGroup;
-			children = (
-				FF3EA78E43A029F7D914845B /* BGM */,
-				FFD5F33DB0A90F4D326A2FE2 /* SFX */,
-				FFADC7D9DDBF288023CD2828 /* Voice */,
-			);
-			path = "Audio";
-			sourceTree = "<group>";
-		};
-		FF370950E58D1B5F54E4DC4A /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Fonts";
-			sourceTree = "<group>";
-		};
-		FFC8007184663BE5AA00E03A /* Localization */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Localization";
-			sourceTree = "<group>";
-		};
-		FFDCEFEDA9CACFEB2B471126 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				FF9E483C5D02111B1B0F25CB /* Assets */,
-				FF38D5CB583D006629297B3C /* Audio */,
-				FF370950E58D1B5F54E4DC4A /* Fonts */,
-				FFC8007184663BE5AA00E03A /* Localization */,
-				FF002181C22D86EFACCBC3AB /* C4-MIRACLE.entitlements */,
-				FF22C6606F663CBC5699A3DE /* Info.plist */,
-			);
-			path = "Resources";
-			sourceTree = "<group>";
-		};
-		FFECA433C497E341A9E2FD32 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				FEB903C99E4DC6FCBC2B1B2B /* AppGroup.swift */,
-				FE34C638D044D022E8178B1E /* BreakDurations.swift */,
-				FEC85C3C10CA79A822222CD2 /* DeviceActivityNames.swift */,
-			);
-			path = "Constants";
-			sourceTree = "<group>";
-		};
-		FFDED9040C2DA1EF93AE238D /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Extensions";
-			sourceTree = "<group>";
-		};
-		FFE995C15C3AF4BDA08DED42 /* Intents */ = {
-			isa = PBXGroup;
-			children = (
-				FE5FF6EA78DFEAA95C04B879 /* BreakControlIntents.swift */,
-			);
-			path = "Intents";
-			sourceTree = "<group>";
-		};
-		FFD38E739AF1892EA4627915 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				FEC0BF577A8DBB7500349788 /* BreakActivityAttributes.swift */,
-				FE35F6228F4DAD7D8BB4D954 /* BreakModels.swift */,
-			);
-			path = "Models";
-			sourceTree = "<group>";
-		};
-		FF106DE8BB03B16CF508437C /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				FE69C135D78D4B42ADBAADC6 /* LiveActivityService.swift */,
-			);
-			path = "Services";
-			sourceTree = "<group>";
-		};
-		FFBBEF96011A7259F2AAE814 /* Storage */ = {
-			isa = PBXGroup;
-			children = (
-				FEFF55D67DEE5FEE00A402B8 /* SharedStore.swift */,
-				FE1D114053AF6A2D8B9C618B /* TokenBox.swift */,
-			);
-			path = "Storage";
-			sourceTree = "<group>";
-		};
-		FF9E9C4F8BD037DA49E94681 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				FFECA433C497E341A9E2FD32 /* Constants */,
-				FFDED9040C2DA1EF93AE238D /* Extensions */,
-				FFE995C15C3AF4BDA08DED42 /* Intents */,
-				FFD38E739AF1892EA4627915 /* Models */,
-				FF106DE8BB03B16CF508437C /* Services */,
-				FFBBEF96011A7259F2AAE814 /* Storage */,
-			);
-			path = "Shared";
-			sourceTree = "<group>";
-		};
-		FF5BDB52B710DF94BA696B82 /* DeviceActivityMonitorExtension */ = {
-			isa = PBXGroup;
-			children = (
-				FEC7EB872EE48BBFC7332022 /* DeviceActivityMonitorExtension.entitlements */,
-				FECF66D6C044169BBFDEA22F /* DeviceActivityMonitorExtension.swift */,
-				FED1DDBFD41D0D00CDFCDAF0 /* Info.plist */,
-			);
-			path = "DeviceActivityMonitorExtension";
-			sourceTree = "<group>";
-		};
-		FF27DDFBCA875ADDCA407346 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Assets";
-			sourceTree = "<group>";
-		};
-		FFFC13133CA60D4907EC928C /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				FEDE0B95A1DFC9095799CEA9 /* BreakLiveActivity.swift */,
-			);
-			path = "Components";
-			sourceTree = "<group>";
-		};
-		FFCBE77D9BD6F65B2E13714B /* LiveActivityExtension */ = {
-			isa = PBXGroup;
-			children = (
-				FF27DDFBCA875ADDCA407346 /* Assets */,
-				FFFC13133CA60D4907EC928C /* Components */,
-				FE9845B166399EBE9B631C74 /* Info.plist */,
-				FE50F6B41C38A7B80C900D6D /* MiracleLiveActivity.entitlements */,
-				FEE22965A272C4FD0B0BCB27 /* MiracleLiveActivityBundle.swift */,
-			);
-			path = "LiveActivityExtension";
-			sourceTree = "<group>";
-		};
-		FF19535AC1EBA817952FF1E3 /* ShieldActionExtension */ = {
-			isa = PBXGroup;
-			children = (
-				FE5B3DE0F5D5F941FB2C3068 /* Info.plist */,
-				FE236C6733648851D3E79405 /* ShieldActionExtension.entitlements */,
-				FEF680208A58BD4D75E2B212 /* ShieldActionExtension.swift */,
-			);
-			path = "ShieldActionExtension";
-			sourceTree = "<group>";
-		};
-		FF2CA1DBF6BEFF11E454BFFC /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				FEDDF5B5AC3B76416CE4627F /* Media.xcassets */,
-				FFB31DF45DE340F630AED954 /* README.md */,
-			);
-			path = "Assets";
-			sourceTree = "<group>";
-		};
-		FFEDFD1F0B4DFE2E5C82CBBE /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Components";
-			sourceTree = "<group>";
-		};
-		FF9A5DF46BD6E4F8362E5FC2 /* ShieldExtension */ = {
-			isa = PBXGroup;
-			children = (
-				FF2CA1DBF6BEFF11E454BFFC /* Assets */,
-				FFEDFD1F0B4DFE2E5C82CBBE /* Components */,
-				FEFC373B51D3ED481260B83D /* Info.plist */,
-				FEADA30AA8A90DC155DBDC39 /* ShieldConfigurationExtension.entitlements */,
-				FE5DE16BB893DD2B07B49BBF /* ShieldConfigurationExtension.swift */,
-			);
-			path = "ShieldExtension";
-			sourceTree = "<group>";
-		};
-		FF6C806553E62CA66BFDE41C /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Assets";
-			sourceTree = "<group>";
-		};
-		FF9B77F7265E8D0315C5BBD3 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Components";
-			sourceTree = "<group>";
-		};
-		FFC3680B126630A75FE73E6D /* Timeline */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Timeline";
-			sourceTree = "<group>";
-		};
-		FFC18A4AF91F0BCE4209CF4C /* Widgets */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Widgets";
-			sourceTree = "<group>";
-		};
-		FF2A2D2DF8CA245E15E44076 /* WidgetExtension */ = {
-			isa = PBXGroup;
-			children = (
-				FF6C806553E62CA66BFDE41C /* Assets */,
-				FF9B77F7265E8D0315C5BBD3 /* Components */,
-				FFC3680B126630A75FE73E6D /* Timeline */,
-				FFC18A4AF91F0BCE4209CF4C /* Widgets */,
-			);
-			path = "WidgetExtension";
-			sourceTree = "<group>";
-		};
-		FFCC1C270198B26FE4036371 /* Targets */ = {
-			isa = PBXGroup;
-			children = (
-				FF5BDB52B710DF94BA696B82 /* DeviceActivityMonitorExtension */,
-				FFCBE77D9BD6F65B2E13714B /* LiveActivityExtension */,
-				FF19535AC1EBA817952FF1E3 /* ShieldActionExtension */,
-				FF9A5DF46BD6E4F8362E5FC2 /* ShieldExtension */,
-				FF2A2D2DF8CA245E15E44076 /* WidgetExtension */,
-			);
-			path = "Targets";
-			sourceTree = "<group>";
-		};
-		FF91B2BFE5C467732CEF8789 /* C4-MIRACLE */ = {
-			isa = PBXGroup;
-			children = (
-				FFD0FFA645865648B8DE5F02 /* App */,
-				FFE1E8AB37C9A152BC94542A /* Core */,
-				FFE3B3A746B90ACF7EB921E8 /* Features */,
-				FFDCEFEDA9CACFEB2B471126 /* Resources */,
-				FF9E9C4F8BD037DA49E94681 /* Shared */,
-				FFCC1C270198B26FE4036371 /* Targets */,
-				FF4C8A8DA75514EC1DEE3438 /* Assets.xcassets */,
-				FFC64688C203866ADAD83281 /* C4_MIRACLEApp.swift */,
-				FF307C36D49B8E75B980DE0B /* README.md */,
-			);
-			path = "C4-MIRACLE";
-			sourceTree = "<group>";
-		};
+		FFCC938AA38BA9FDE0BD361C /* BreakModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE35F6228F4DAD7D8BB4D954 /* BreakModels.swift */; };
+		FFD7C7B9335520FFB80E3B6D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDE15DE3D90FD687A004EC8 /* RootView.swift */; };
+		FFDE1D6B09FB8E734F99E7AE /* DeviceActivityNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC85C3C10CA79A822222CD2 /* DeviceActivityNames.swift */; };
+		FFDE214FF3045188C9BFAFED /* PermissionSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF51B21F5640E82CA331610B /* PermissionSetupView.swift */; };
+		FFF0CD8BDF273E6C6C4F0B25 /* DiagnosticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF042F0A275E3ACFD0E008F /* DiagnosticsView.swift */; };
+		FFF2B6B53371F92B31AF7052 /* C4_MIRACLEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC64688C203866ADAD83281 /* C4_MIRACLEApp.swift */; };
+/* End PBXBuildFile section */
 
-
-/* Begin objects added for the Screen Time extension targets */
-		FE92644C7B160ACEAAD70207 /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5DE16BB893DD2B07B49BBF /* ShieldConfigurationExtension.swift */; };
-		FE4A77DCF7C59448CF416B9A /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB903C99E4DC6FCBC2B1B2B /* AppGroup.swift */; };
-		FE5A72F20883B3FF8362AF16 /* BreakDurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE34C638D044D022E8178B1E /* BreakDurations.swift */; };
-		FEA79964F895C2028480953A /* DeviceActivityNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC85C3C10CA79A822222CD2 /* DeviceActivityNames.swift */; };
-		FE45C2751CBF1550A5E4429F /* BreakActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC0BF577A8DBB7500349788 /* BreakActivityAttributes.swift */; };
-		FE3F8488AD50B3EFDF2ECCDB /* BreakModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE35F6228F4DAD7D8BB4D954 /* BreakModels.swift */; };
-		FEDB59753D98FC8A3573F143 /* LiveActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C135D78D4B42ADBAADC6 /* LiveActivityService.swift */; };
-		FEFEC2D223DD04231317DF1C /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFF55D67DEE5FEE00A402B8 /* SharedStore.swift */; };
-		FEB2831F7A5415F89A589D99 /* TokenBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D114053AF6A2D8B9C618B /* TokenBox.swift */; };
-		FE425D49159A7EBCB4918031 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEDDF5B5AC3B76416CE4627F /* Media.xcassets */; };
-		FE191621850E677692FDE7FF /* ShieldActionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF680208A58BD4D75E2B212 /* ShieldActionExtension.swift */; };
-		FE652043396EB01785443F96 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB903C99E4DC6FCBC2B1B2B /* AppGroup.swift */; };
-		FE0D4DA44E98FE46DB1A6F3F /* BreakDurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE34C638D044D022E8178B1E /* BreakDurations.swift */; };
-		FEF43554554562F54EAB4C49 /* DeviceActivityNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC85C3C10CA79A822222CD2 /* DeviceActivityNames.swift */; };
-		FE46BA1AE82730D3EC66E3D5 /* BreakActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC0BF577A8DBB7500349788 /* BreakActivityAttributes.swift */; };
-		FE7307B93FB631FBAAF46252 /* BreakModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE35F6228F4DAD7D8BB4D954 /* BreakModels.swift */; };
-		FE3EA4099F3DB1EB47B1971F /* LiveActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C135D78D4B42ADBAADC6 /* LiveActivityService.swift */; };
-		FED5AC37FF106027D868E093 /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFF55D67DEE5FEE00A402B8 /* SharedStore.swift */; };
-		FEEEC46C58B8391016D1E500 /* TokenBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D114053AF6A2D8B9C618B /* TokenBox.swift */; };
-		FEFEFCA61254891430155C1E /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECF66D6C044169BBFDEA22F /* DeviceActivityMonitorExtension.swift */; };
-		FE1A36CFDB33B3CB3685EC8E /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB903C99E4DC6FCBC2B1B2B /* AppGroup.swift */; };
-		FE8D17C8454D2832F0841614 /* BreakDurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE34C638D044D022E8178B1E /* BreakDurations.swift */; };
-		FE30D3948D77ABDC432A0BC1 /* DeviceActivityNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC85C3C10CA79A822222CD2 /* DeviceActivityNames.swift */; };
-		FEBBABBEA3EC06914F6CA0E6 /* BreakActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC0BF577A8DBB7500349788 /* BreakActivityAttributes.swift */; };
-		FE42EA19B9A8F7F1362BB76A /* BreakModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE35F6228F4DAD7D8BB4D954 /* BreakModels.swift */; };
-		FE52617BBA39DF5840D859CE /* LiveActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C135D78D4B42ADBAADC6 /* LiveActivityService.swift */; };
-		FEC7D86FDE84542674250BFD /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFF55D67DEE5FEE00A402B8 /* SharedStore.swift */; };
-		FE66DA10A3DA429A3E3F87AE /* TokenBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D114053AF6A2D8B9C618B /* TokenBox.swift */; };
-		FE27B32934963619B0FC40EA /* MiracleLiveActivityBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE22965A272C4FD0B0BCB27 /* MiracleLiveActivityBundle.swift */; };
-		FE3ED6766E8F43149C2B1F18 /* BreakLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDE0B95A1DFC9095799CEA9 /* BreakLiveActivity.swift */; };
-		FEFAF03B1ED148560C600B9F /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB903C99E4DC6FCBC2B1B2B /* AppGroup.swift */; };
-		FE34D2981DB58CB05A297E9E /* BreakDurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE34C638D044D022E8178B1E /* BreakDurations.swift */; };
-		FE5ECC6FDD020B0D6F8CE42D /* DeviceActivityNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC85C3C10CA79A822222CD2 /* DeviceActivityNames.swift */; };
-		FEEF0690D3D6D6A388DD6A26 /* BreakActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC0BF577A8DBB7500349788 /* BreakActivityAttributes.swift */; };
-		FECA891A52D3FE338F3067D9 /* BreakModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE35F6228F4DAD7D8BB4D954 /* BreakModels.swift */; };
-		FEEFF4CB0F92AD7185827652 /* LiveActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69C135D78D4B42ADBAADC6 /* LiveActivityService.swift */; };
-		FE6272DBC108D0F3283CF6FA /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFF55D67DEE5FEE00A402B8 /* SharedStore.swift */; };
-		FE6AF71D607D52A6C2B8E2C9 /* TokenBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D114053AF6A2D8B9C618B /* TokenBox.swift */; };
-		FE428928BCEFB812804E1778 /* BreakControlIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5FF6EA78DFEAA95C04B879 /* BreakControlIntents.swift */; };
-		FE0A6957288CAFD20FBEC0CE /* ShieldConfigurationExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FE6C8F1F2A8D7424FA0DBEEE /* ShieldConfigurationExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		FEFE8484257153C239C6527A /* ShieldActionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FEE7913A6680398500FFF352 /* ShieldActionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		FEEA40827EFAB7D34B29AFEE /* DeviceActivityMonitorExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FE7DF867ABE9FAECFF93263F /* DeviceActivityMonitorExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		FEBA08C520FA87EF64FDC5B1 /* MiracleLiveActivity.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FE4F8E28698A30F59259B9D6 /* MiracleLiveActivity.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		FE6C8F1F2A8D7424FA0DBEEE /* ShieldConfigurationExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ShieldConfigurationExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FEE7913A6680398500FFF352 /* ShieldActionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ShieldActionExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE7DF867ABE9FAECFF93263F /* DeviceActivityMonitorExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DeviceActivityMonitorExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE4F8E28698A30F59259B9D6 /* MiracleLiveActivity.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MiracleLiveActivity.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FEEF3BF7277BD35764707907 /* PBXContainerItemProxy */ = {
+/* Begin PBXContainerItemProxy section */
+		FE0ADB2DABF94ACBBB4E7D48 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4E54CD30301F81CF00F4E8B1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FEE0E9BF0B4B10C11F8217A3;
-			remoteInfo = "ShieldConfigurationExtension";
+			remoteGlobalIDString = FE089A5A535F21CBC70F25B6;
+			remoteInfo = DeviceActivityMonitorExtension;
 		};
 		FED5F4F8CD42BBD9EFBAF90E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4E54CD30301F81CF00F4E8B1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FE0D4CBB657030DD010DBE6A;
-			remoteInfo = "ShieldActionExtension";
+			remoteInfo = ShieldActionExtension;
 		};
-		FE0ADB2DABF94ACBBB4E7D48 /* PBXContainerItemProxy */ = {
+		FEEF3BF7277BD35764707907 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4E54CD30301F81CF00F4E8B1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FE089A5A535F21CBC70F25B6;
-			remoteInfo = "DeviceActivityMonitorExtension";
+			remoteGlobalIDString = FEE0E9BF0B4B10C11F8217A3;
+			remoteInfo = ShieldConfigurationExtension;
 		};
 		FEF48CBBEC85235CDECE96FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4E54CD30301F81CF00F4E8B1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FE35C3E4AE97E098A169D3C6;
-			remoteInfo = "MiracleLiveActivity";
+			remoteInfo = MiracleLiveActivity;
 		};
-		FE8698F860D6D9283A7D18AA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FEE0E9BF0B4B10C11F8217A3 /* ShieldConfigurationExtension */;
-			targetProxy = FEEF3BF7277BD35764707907 /* PBXContainerItemProxy */;
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FE64F150FB48C4AC8EE7022E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FE0A6957288CAFD20FBEC0CE /* ShieldConfigurationExtension.appex in Embed Foundation Extensions */,
+				FEFE8484257153C239C6527A /* ShieldActionExtension.appex in Embed Foundation Extensions */,
+				FEEA40827EFAB7D34B29AFEE /* DeviceActivityMonitorExtension.appex in Embed Foundation Extensions */,
+				FEBA08C520FA87EF64FDC5B1 /* MiracleLiveActivity.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FEC81AE766867141A558BA56 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FE0D4CBB657030DD010DBE6A /* ShieldActionExtension */;
-			targetProxy = FED5F4F8CD42BBD9EFBAF90E /* PBXContainerItemProxy */;
-		};
-		FE44E50FEB999B3CE5CB5AD4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FE089A5A535F21CBC70F25B6 /* DeviceActivityMonitorExtension */;
-			targetProxy = FE0ADB2DABF94ACBBB4E7D48 /* PBXContainerItemProxy */;
-		};
-		FE197A2AB6CB0BBD7C6F61AA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FE35C3E4AE97E098A169D3C6 /* MiracleLiveActivity */;
-			targetProxy = FEF48CBBEC85235CDECE96FA /* PBXContainerItemProxy */;
-		};
-		FEE0E9BF0B4B10C11F8217A3 /* ShieldConfigurationExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FE76260F368533028C173ADD /* Build configuration list for PBXNativeTarget "ShieldConfigurationExtension" */;
-			buildPhases = (
-				FE4414816D870A47F8DFACAB /* Sources */,
-				FEFC0A9D6E6A8A15CACDA73F /* Frameworks */,
-				FEE9A7264FDAFDC5338770BB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "ShieldConfigurationExtension";
-			productName = "ShieldConfigurationExtension";
-			productReference = FE6C8F1F2A8D7424FA0DBEEE /* ShieldConfigurationExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		FE0D4CBB657030DD010DBE6A /* ShieldActionExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FE5D1DBA46442FF60549E305 /* Build configuration list for PBXNativeTarget "ShieldActionExtension" */;
-			buildPhases = (
-				FE98A52381681964F885E101 /* Sources */,
-				FE875743F8A732B53566A807 /* Frameworks */,
-				FECAD7742FE3DAF71EF79DCC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "ShieldActionExtension";
-			productName = "ShieldActionExtension";
-			productReference = FEE7913A6680398500FFF352 /* ShieldActionExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		FE089A5A535F21CBC70F25B6 /* DeviceActivityMonitorExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FEA302D5F6A743D277135CF1 /* Build configuration list for PBXNativeTarget "DeviceActivityMonitorExtension" */;
-			buildPhases = (
-				FE9741DF84606B6F448D5EE4 /* Sources */,
-				FEF093F4A58D334193DE2257 /* Frameworks */,
-				FEF0D479496326F4186B2527 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "DeviceActivityMonitorExtension";
-			productName = "DeviceActivityMonitorExtension";
-			productReference = FE7DF867ABE9FAECFF93263F /* DeviceActivityMonitorExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		FE35C3E4AE97E098A169D3C6 /* MiracleLiveActivity */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FE630B5A33D5A5FCA3ED0861 /* Build configuration list for PBXNativeTarget "MiracleLiveActivity" */;
-			buildPhases = (
-				FE08872A1D310622202A3081 /* Sources */,
-				FE0B5611ECD410D6ECD3D33C /* Frameworks */,
-				FE1A8E2D5DE85804DFD2FF5A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "MiracleLiveActivity";
-			productName = "MiracleLiveActivity";
-			productReference = FE4F8E28698A30F59259B9D6 /* MiracleLiveActivity.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		FE4414816D870A47F8DFACAB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4E54CD38301F81CF00F4E8B1 /* C4-MIRACLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "C4-MIRACLE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F93D2CA03029AA51001F548E /* PandiParker.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = PandiParker.icon; sourceTree = "<group>"; };
+		F991485F3029D5ED005D413C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		FC506E5EBC3FF51DF20119EA /* DailyRecap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyRecap.swift; sourceTree = "<group>"; };
+		FCF9A3E2874A78171D366948 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FD69F6486A4FED83AD50B7E6 /* BrandColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandColors.swift; sourceTree = "<group>"; };
+		FE1D114053AF6A2D8B9C618B /* TokenBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenBox.swift; sourceTree = "<group>"; };
+		FE236C6733648851D3E79405 /* ShieldActionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShieldActionExtension.entitlements; sourceTree = "<group>"; };
+		FE34C638D044D022E8178B1E /* BreakDurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakDurations.swift; sourceTree = "<group>"; };
+		FE35F6228F4DAD7D8BB4D954 /* BreakModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakModels.swift; sourceTree = "<group>"; };
+		FE4F8E28698A30F59259B9D6 /* MiracleLiveActivity.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MiracleLiveActivity.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE50F6B41C38A7B80C900D6D /* MiracleLiveActivity.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MiracleLiveActivity.entitlements; sourceTree = "<group>"; };
+		FE5B3DE0F5D5F941FB2C3068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE5DE16BB893DD2B07B49BBF /* ShieldConfigurationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldConfigurationExtension.swift; sourceTree = "<group>"; };
+		FE5FF6EA78DFEAA95C04B879 /* BreakControlIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakControlIntents.swift; sourceTree = "<group>"; };
+		FE69C135D78D4B42ADBAADC6 /* LiveActivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityService.swift; sourceTree = "<group>"; };
+		FE6C8F1F2A8D7424FA0DBEEE /* ShieldConfigurationExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShieldConfigurationExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE7DF867ABE9FAECFF93263F /* DeviceActivityMonitorExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DeviceActivityMonitorExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE9845B166399EBE9B631C74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEADA30AA8A90DC155DBDC39 /* ShieldConfigurationExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShieldConfigurationExtension.entitlements; sourceTree = "<group>"; };
+		FEB903C99E4DC6FCBC2B1B2B /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
+		FEC0BF577A8DBB7500349788 /* BreakActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakActivityAttributes.swift; sourceTree = "<group>"; };
+		FEC7EB872EE48BBFC7332022 /* DeviceActivityMonitorExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeviceActivityMonitorExtension.entitlements; sourceTree = "<group>"; };
+		FEC85C3C10CA79A822222CD2 /* DeviceActivityNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityNames.swift; sourceTree = "<group>"; };
+		FECF66D6C044169BBFDEA22F /* DeviceActivityMonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityMonitorExtension.swift; sourceTree = "<group>"; };
+		FED1DDBFD41D0D00CDFCDAF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEDDF5B5AC3B76416CE4627F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		FEDE0B95A1DFC9095799CEA9 /* BreakLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakLiveActivity.swift; sourceTree = "<group>"; };
+		FEE22965A272C4FD0B0BCB27 /* MiracleLiveActivityBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiracleLiveActivityBundle.swift; sourceTree = "<group>"; };
+		FEE7913A6680398500FFF352 /* ShieldActionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShieldActionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEF680208A58BD4D75E2B212 /* ShieldActionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldActionExtension.swift; sourceTree = "<group>"; };
+		FEFC373B51D3ED481260B83D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEFF55D67DEE5FEE00A402B8 /* SharedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStore.swift; sourceTree = "<group>"; };
+		FF002181C22D86EFACCBC3AB /* C4-MIRACLE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "C4-MIRACLE.entitlements"; sourceTree = "<group>"; };
+		FF090F77BC3166E1CCA182C1 /* WorkModeIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkModeIntents.swift; sourceTree = "<group>"; };
+		FF16B767504B1756DCA75B66 /* CapabilityBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapabilityBadge.swift; sourceTree = "<group>"; };
+		FF22C6606F663CBC5699A3DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF307C36D49B8E75B980DE0B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FF4C8A8DA75514EC1DEE3438 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF51B21F5640E82CA331610B /* PermissionSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionSetupView.swift; sourceTree = "<group>"; };
+		FF6CD33DC2C9429819584DC0 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		FF705EC096197FFE911D0550 /* ScreenTimeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeService.swift; sourceTree = "<group>"; };
+		FFAB12437EE2A6D67E0A4AFB /* BreakConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakConfigView.swift; sourceTree = "<group>"; };
+		FFB31DF45DE340F630AED954 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FFC64688C203866ADAD83281 /* C4_MIRACLEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C4_MIRACLEApp.swift; sourceTree = "<group>"; };
+		FFDC9F22A43F165D2FC1E4DF /* WorkModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkModeView.swift; sourceTree = "<group>"; };
+		FFDE15DE3D90FD687A004EC8 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		FFE55EC018CDE13401129EC2 /* MiracleAppShortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiracleAppShortcuts.swift; sourceTree = "<group>"; };
+		FFE8876D89DCAB14AB26ECC7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		FFF042F0A275E3ACFD0E008F /* DiagnosticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticsView.swift; sourceTree = "<group>"; };
+		FFFC52DE53E27C181C8E8070 /* AppLaunchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLaunchService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4E54CD35301F81CF00F4E8B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE92644C7B160ACEAAD70207 /* ShieldConfigurationExtension.swift in Sources */,
-				FE4A77DCF7C59448CF416B9A /* AppGroup.swift in Sources */,
-				FE5A72F20883B3FF8362AF16 /* BreakDurations.swift in Sources */,
-				FEA79964F895C2028480953A /* DeviceActivityNames.swift in Sources */,
-				FE45C2751CBF1550A5E4429F /* BreakActivityAttributes.swift in Sources */,
-				FE3F8488AD50B3EFDF2ECCDB /* BreakModels.swift in Sources */,
-				FEDB59753D98FC8A3573F143 /* LiveActivityService.swift in Sources */,
-				FEFEC2D223DD04231317DF1C /* SharedStore.swift in Sources */,
-				FEB2831F7A5415F89A589D99 /* TokenBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE98A52381681964F885E101 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FE191621850E677692FDE7FF /* ShieldActionExtension.swift in Sources */,
-				FE652043396EB01785443F96 /* AppGroup.swift in Sources */,
-				FE0D4DA44E98FE46DB1A6F3F /* BreakDurations.swift in Sources */,
-				FEF43554554562F54EAB4C49 /* DeviceActivityNames.swift in Sources */,
-				FE46BA1AE82730D3EC66E3D5 /* BreakActivityAttributes.swift in Sources */,
-				FE7307B93FB631FBAAF46252 /* BreakModels.swift in Sources */,
-				FE3EA4099F3DB1EB47B1971F /* LiveActivityService.swift in Sources */,
-				FED5AC37FF106027D868E093 /* SharedStore.swift in Sources */,
-				FEEEC46C58B8391016D1E500 /* TokenBox.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE9741DF84606B6F448D5EE4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FEFEFCA61254891430155C1E /* DeviceActivityMonitorExtension.swift in Sources */,
-				FE1A36CFDB33B3CB3685EC8E /* AppGroup.swift in Sources */,
-				FE8D17C8454D2832F0841614 /* BreakDurations.swift in Sources */,
-				FE30D3948D77ABDC432A0BC1 /* DeviceActivityNames.swift in Sources */,
-				FEBBABBEA3EC06914F6CA0E6 /* BreakActivityAttributes.swift in Sources */,
-				FE42EA19B9A8F7F1362BB76A /* BreakModels.swift in Sources */,
-				FE52617BBA39DF5840D859CE /* LiveActivityService.swift in Sources */,
-				FEC7D86FDE84542674250BFD /* SharedStore.swift in Sources */,
-				FE66DA10A3DA429A3E3F87AE /* TokenBox.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE08872A1D310622202A3081 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FE27B32934963619B0FC40EA /* MiracleLiveActivityBundle.swift in Sources */,
-				FE3ED6766E8F43149C2B1F18 /* BreakLiveActivity.swift in Sources */,
-				FEFAF03B1ED148560C600B9F /* AppGroup.swift in Sources */,
-				FE34D2981DB58CB05A297E9E /* BreakDurations.swift in Sources */,
-				FE5ECC6FDD020B0D6F8CE42D /* DeviceActivityNames.swift in Sources */,
-				FEEF0690D3D6D6A388DD6A26 /* BreakActivityAttributes.swift in Sources */,
-				FECA891A52D3FE338F3067D9 /* BreakModels.swift in Sources */,
-				FEEFF4CB0F92AD7185827652 /* LiveActivityService.swift in Sources */,
-				FE6272DBC108D0F3283CF6FA /* SharedStore.swift in Sources */,
-				FE6AF71D607D52A6C2B8E2C9 /* TokenBox.swift in Sources */,
-				FE428928BCEFB812804E1778 /* BreakControlIntents.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FEFC0A9D6E6A8A15CACDA73F /* Frameworks */ = {
+		FE0B5611ECD410D6ECD3D33C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -931,300 +215,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE0B5611ECD410D6ECD3D33C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FEE9A7264FDAFDC5338770BB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FE425D49159A7EBCB4918031 /* Media.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FECAD7742FE3DAF71EF79DCC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FEF0D479496326F4186B2527 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE1A8E2D5DE85804DFD2FF5A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE64F150FB48C4AC8EE7022E /* Embed Foundation Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				FE0A6957288CAFD20FBEC0CE /* ShieldConfigurationExtension.appex in Embed Foundation Extensions */,
-				FEFE8484257153C239C6527A /* ShieldActionExtension.appex in Embed Foundation Extensions */,
-				FEEA40827EFAB7D34B29AFEE /* DeviceActivityMonitorExtension.appex in Embed Foundation Extensions */,
-				FEBA08C520FA87EF64FDC5B1 /* MiracleLiveActivity.appex in Embed Foundation Extensions */,
-			);
-			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE52778040BF55D993C55526 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_ENTITLEMENTS = "C4-MIRACLE/Targets/ShieldExtension/ShieldConfigurationExtension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H37C5FSRQW;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "C4-MIRACLE/Targets/ShieldExtension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.berzki.Miracle.ShieldConfiguration";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		FE461D8511612A6F89373D6C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_ENTITLEMENTS = "C4-MIRACLE/Targets/ShieldExtension/ShieldConfigurationExtension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H37C5FSRQW;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "C4-MIRACLE/Targets/ShieldExtension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.berzki.Miracle.ShieldConfiguration";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		FE08CF255C8EDE9F936984FF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_ENTITLEMENTS = "C4-MIRACLE/Targets/ShieldActionExtension/ShieldActionExtension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H37C5FSRQW;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "C4-MIRACLE/Targets/ShieldActionExtension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.berzki.Miracle.ShieldAction";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		FE0689378DCA5F77F56BB70B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_ENTITLEMENTS = "C4-MIRACLE/Targets/ShieldActionExtension/ShieldActionExtension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H37C5FSRQW;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "C4-MIRACLE/Targets/ShieldActionExtension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.berzki.Miracle.ShieldAction";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		FEB3C3DC18A425F82D7874FC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_ENTITLEMENTS = "C4-MIRACLE/Targets/DeviceActivityMonitorExtension/DeviceActivityMonitorExtension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H37C5FSRQW;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "C4-MIRACLE/Targets/DeviceActivityMonitorExtension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.berzki.Miracle.Monitor";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		FEA855085DBC31C48FF89668 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_ENTITLEMENTS = "C4-MIRACLE/Targets/DeviceActivityMonitorExtension/DeviceActivityMonitorExtension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H37C5FSRQW;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "C4-MIRACLE/Targets/DeviceActivityMonitorExtension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.berzki.Miracle.Monitor";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		FE36A7E71B974C911C8EE3D2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_ENTITLEMENTS = "C4-MIRACLE/Targets/LiveActivityExtension/MiracleLiveActivity.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H37C5FSRQW;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "C4-MIRACLE/Targets/LiveActivityExtension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.berzki.Miracle.LiveActivity";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		FE5D88A0EA6FEA5DB2258665 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_ENTITLEMENTS = "C4-MIRACLE/Targets/LiveActivityExtension/MiracleLiveActivity.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H37C5FSRQW;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "C4-MIRACLE/Targets/LiveActivityExtension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.berzki.Miracle.LiveActivity";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		FE76260F368533028C173ADD /* Build configuration list for PBXNativeTarget "ShieldConfigurationExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FE52778040BF55D993C55526 /* Debug */,
-				FE461D8511612A6F89373D6C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FE5D1DBA46442FF60549E305 /* Build configuration list for PBXNativeTarget "ShieldActionExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FE08CF255C8EDE9F936984FF /* Debug */,
-				FE0689378DCA5F77F56BB70B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FEA302D5F6A743D277135CF1 /* Build configuration list for PBXNativeTarget "DeviceActivityMonitorExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FEB3C3DC18A425F82D7874FC /* Debug */,
-				FEA855085DBC31C48FF89668 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FE630B5A33D5A5FCA3ED0861 /* Build configuration list for PBXNativeTarget "MiracleLiveActivity" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FE36A7E71B974C911C8EE3D2 /* Debug */,
-				FE5D88A0EA6FEA5DB2258665 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End objects added for the Screen Time extension targets */
-
-/* Begin PBXFileReference section */
-		4E54CD38301F81CF00F4E8B1 /* C4-MIRACLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "C4-MIRACLE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		4E54CD35301F81CF00F4E8B1 /* Frameworks */ = {
+		FEFC0A9D6E6A8A15CACDA73F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1254,6 +245,619 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		FF0FA334FFEBFDE8D74C24D4 /* Expressions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Expressions;
+			sourceTree = "<group>";
+		};
+		FF106DE8BB03B16CF508437C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FE69C135D78D4B42ADBAADC6 /* LiveActivityService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FF1182EA2008C0102A1985D3 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				FF0FA334FFEBFDE8D74C24D4 /* Expressions */,
+				FFD4AF1144E663391A670FBC /* Failed */,
+				FF429E3F5031969AC331C138 /* Fishing */,
+				FFDDF1FB64A6DCDDE4872498 /* Idle */,
+				FF850514BBEEA7F34566D89D /* Success */,
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
+		FF19535AC1EBA817952FF1E3 /* ShieldActionExtension */ = {
+			isa = PBXGroup;
+			children = (
+				FE5B3DE0F5D5F941FB2C3068 /* Info.plist */,
+				FE236C6733648851D3E79405 /* ShieldActionExtension.entitlements */,
+				FEF680208A58BD4D75E2B212 /* ShieldActionExtension.swift */,
+			);
+			path = ShieldActionExtension;
+			sourceTree = "<group>";
+		};
+		FF1D48569E08CED9AE12C689 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FF3E6D6A8EF110E2C2655952 /* Views */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		FF1F87AD8576C9DD7E5577DD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FF21B24E72CD9719DAF6C219 /* Fish */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fish;
+			sourceTree = "<group>";
+		};
+		FF21FF5C9A7B7061450D6A36 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FFAB12437EE2A6D67E0A4AFB /* BreakConfigView.swift */,
+				FFE8876D89DCAB14AB26ECC7 /* OnboardingView.swift */,
+				FF51B21F5640E82CA331610B /* PermissionSetupView.swift */,
+				FFDC9F22A43F165D2FC1E4DF /* WorkModeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FF26B35BC86B1E9D1BA93FB0 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		FF27DDFBCA875ADDCA407346 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		FF2A2D2DF8CA245E15E44076 /* WidgetExtension */ = {
+			isa = PBXGroup;
+			children = (
+				FF6C806553E62CA66BFDE41C /* Assets */,
+				FF9B77F7265E8D0315C5BBD3 /* Components */,
+				FFC3680B126630A75FE73E6D /* Timeline */,
+				FFC18A4AF91F0BCE4209CF4C /* Widgets */,
+			);
+			path = WidgetExtension;
+			sourceTree = "<group>";
+		};
+		FF2CA1DBF6BEFF11E454BFFC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				FEDDF5B5AC3B76416CE4627F /* Media.xcassets */,
+				FFB31DF45DE340F630AED954 /* README.md */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		FF334907327C76183D4B9BA2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FFFC52DE53E27C181C8E8070 /* AppLaunchService.swift */,
+				FF705EC096197FFE911D0550 /* ScreenTimeService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FF370950E58D1B5F54E4DC4A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FF38D5CB583D006629297B3C /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				FF3EA78E43A029F7D914845B /* BGM */,
+				FFD5F33DB0A90F4D326A2FE2 /* SFX */,
+				FFADC7D9DDBF288023CD2828 /* Voice */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		FF3E6D6A8EF110E2C2655952 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FFF042F0A275E3ACFD0E008F /* DiagnosticsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FF3EA78E43A029F7D914845B /* BGM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BGM;
+			sourceTree = "<group>";
+		};
+		FF429E3F5031969AC331C138 /* Fishing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fishing;
+			sourceTree = "<group>";
+		};
+		FF4B3FB5AECC2D001B67F0B5 /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Effects;
+			sourceTree = "<group>";
+		};
+		FF4DCC7DFB1432B388B713A4 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		FF5B2E9A840A75005D8948C0 /* Shadow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shadow;
+			sourceTree = "<group>";
+		};
+		FF5BDB52B710DF94BA696B82 /* DeviceActivityMonitorExtension */ = {
+			isa = PBXGroup;
+			children = (
+				FEC7EB872EE48BBFC7332022 /* DeviceActivityMonitorExtension.entitlements */,
+				FECF66D6C044169BBFDEA22F /* DeviceActivityMonitorExtension.swift */,
+				FED1DDBFD41D0D00CDFCDAF0 /* Info.plist */,
+			);
+			path = DeviceActivityMonitorExtension;
+			sourceTree = "<group>";
+		};
+		FF6C806553E62CA66BFDE41C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		FF790C4FD9DE56D26B566BD5 /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				FF090F77BC3166E1CCA182C1 /* WorkModeIntents.swift */,
+			);
+			path = Intents;
+			sourceTree = "<group>";
+		};
+		FF7B19DF975D93F357329CB6 /* Boat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Boat;
+			sourceTree = "<group>";
+		};
+		FF7C6F313A69A102A8217A1A /* Inventory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Inventory;
+			sourceTree = "<group>";
+		};
+		FF7DAED697FBE775F9B2541C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FF850514BBEEA7F34566D89D /* Success */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Success;
+			sourceTree = "<group>";
+		};
+		FF91B2BFE5C467732CEF8789 /* C4-MIRACLE */ = {
+			isa = PBXGroup;
+			children = (
+				FFD0FFA645865648B8DE5F02 /* App */,
+				FFE1E8AB37C9A152BC94542A /* Core */,
+				FFE3B3A746B90ACF7EB921E8 /* Features */,
+				FFDCEFEDA9CACFEB2B471126 /* Resources */,
+				FF9E9C4F8BD037DA49E94681 /* Shared */,
+				FFCC1C270198B26FE4036371 /* Targets */,
+				FF4C8A8DA75514EC1DEE3438 /* Assets.xcassets */,
+				FFC64688C203866ADAD83281 /* C4_MIRACLEApp.swift */,
+				FF307C36D49B8E75B980DE0B /* README.md */,
+				F93D2CA03029AA51001F548E /* PandiParker.icon */,
+			);
+			path = "C4-MIRACLE";
+			sourceTree = "<group>";
+		};
+		FF99446392EF2D30FA304802 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		FF9A5DF46BD6E4F8362E5FC2 /* ShieldExtension */ = {
+			isa = PBXGroup;
+			children = (
+				FF2CA1DBF6BEFF11E454BFFC /* Assets */,
+				FFEDFD1F0B4DFE2E5C82CBBE /* Components */,
+				FEFC373B51D3ED481260B83D /* Info.plist */,
+				FEADA30AA8A90DC155DBDC39 /* ShieldConfigurationExtension.entitlements */,
+				FE5DE16BB893DD2B07B49BBF /* ShieldConfigurationExtension.swift */,
+			);
+			path = ShieldExtension;
+			sourceTree = "<group>";
+		};
+		FF9B77F7265E8D0315C5BBD3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FF9D63F942DF0302EF212950 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		FF9E483C5D02111B1B0F25CB /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				FF7B19DF975D93F357329CB6 /* Boat */,
+				FF1182EA2008C0102A1985D3 /* Character */,
+				FF4B3FB5AECC2D001B67F0B5 /* Effects */,
+				FFC8A0A6CEBCA7B2DE9EBAB5 /* Environment */,
+				FF21B24E72CD9719DAF6C219 /* Fish */,
+				FFD94B536EC7A66A3DBDF80A /* UI */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		FF9E9C4F8BD037DA49E94681 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FFECA433C497E341A9E2FD32 /* Constants */,
+				FFDED9040C2DA1EF93AE238D /* Extensions */,
+				FFE995C15C3AF4BDA08DED42 /* Intents */,
+				FFD38E739AF1892EA4627915 /* Models */,
+				FF106DE8BB03B16CF508437C /* Services */,
+				FFBBEF96011A7259F2AAE814 /* Storage */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		FF9EB51B5A10BE179D5D9A0D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F991485F3029D5ED005D413C /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		FFAD0E44C858749305DFEE8A /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				FF4DCC7DFB1432B388B713A4 /* Animation */,
+				FF9D63F942DF0302EF212950 /* Colors */,
+				FFF07D5DAA0590FE45E5919F /* Radius */,
+				FF5B2E9A840A75005D8948C0 /* Shadow */,
+				FFAE6E09B5826E0D82C243CD /* Spacing */,
+				FFD4423880C6F72747DB2918 /* Typography */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		FFADC7D9DDBF288023CD2828 /* Voice */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Voice;
+			sourceTree = "<group>";
+		};
+		FFAE6E09B5826E0D82C243CD /* Spacing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Spacing;
+			sourceTree = "<group>";
+		};
+		FFB91E9DD7595F2F8A481F97 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FCF9A3E2874A78171D366948 /* HomeView.swift */,
+				FC506E5EBC3FF51DF20119EA /* DailyRecap.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FFBBEF96011A7259F2AAE814 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				FEFF55D67DEE5FEE00A402B8 /* SharedStore.swift */,
+				FE1D114053AF6A2D8B9C618B /* TokenBox.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		FFBEEDFE83FB85F0577839B3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FFC18A4AF91F0BCE4209CF4C /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		FFC2BD0EFAAF02073141CC99 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FFC3680B126630A75FE73E6D /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		FFC8007184663BE5AA00E03A /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		FFC8A0A6CEBCA7B2DE9EBAB5 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				FFCFB1CE34CA517FAA61BFEC /* Pier */,
+				FFF9FFAAD9E36262FABB1E35 /* Sea */,
+				FFD35AD24DAA9C642895DC4A /* Sky */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		FFCBE77D9BD6F65B2E13714B /* LiveActivityExtension */ = {
+			isa = PBXGroup;
+			children = (
+				FF27DDFBCA875ADDCA407346 /* Assets */,
+				FFFC13133CA60D4907EC928C /* Components */,
+				FE9845B166399EBE9B631C74 /* Info.plist */,
+				FE50F6B41C38A7B80C900D6D /* MiracleLiveActivity.entitlements */,
+				FEE22965A272C4FD0B0BCB27 /* MiracleLiveActivityBundle.swift */,
+			);
+			path = LiveActivityExtension;
+			sourceTree = "<group>";
+		};
+		FFCC1C270198B26FE4036371 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				FF5BDB52B710DF94BA696B82 /* DeviceActivityMonitorExtension */,
+				FFCBE77D9BD6F65B2E13714B /* LiveActivityExtension */,
+				FF19535AC1EBA817952FF1E3 /* ShieldActionExtension */,
+				FF9A5DF46BD6E4F8362E5FC2 /* ShieldExtension */,
+				FF2A2D2DF8CA245E15E44076 /* WidgetExtension */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		FFCFB1CE34CA517FAA61BFEC /* Pier */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pier;
+			sourceTree = "<group>";
+		};
+		FFD0FFA645865648B8DE5F02 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FF6CD33DC2C9429819584DC0 /* AppState.swift */,
+				FFE55EC018CDE13401129EC2 /* MiracleAppShortcuts.swift */,
+				FFDE15DE3D90FD687A004EC8 /* RootView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FFD35AD24DAA9C642895DC4A /* Sky */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sky;
+			sourceTree = "<group>";
+		};
+		FFD38E739AF1892EA4627915 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FEC0BF577A8DBB7500349788 /* BreakActivityAttributes.swift */,
+				FE35F6228F4DAD7D8BB4D954 /* BreakModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FFD4423880C6F72747DB2918 /* Typography */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Typography;
+			sourceTree = "<group>";
+		};
+		FFD4AF1144E663391A670FBC /* Failed */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Failed;
+			sourceTree = "<group>";
+		};
+		FFD5F33DB0A90F4D326A2FE2 /* SFX */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SFX;
+			sourceTree = "<group>";
+		};
+		FFD94B536EC7A66A3DBDF80A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		FFDCEFEDA9CACFEB2B471126 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FF9E483C5D02111B1B0F25CB /* Assets */,
+				FF38D5CB583D006629297B3C /* Audio */,
+				FF370950E58D1B5F54E4DC4A /* Fonts */,
+				FFC8007184663BE5AA00E03A /* Localization */,
+				FF002181C22D86EFACCBC3AB /* C4-MIRACLE.entitlements */,
+				FF22C6606F663CBC5699A3DE /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FFDDF1FB64A6DCDDE4872498 /* Idle */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Idle;
+			sourceTree = "<group>";
+		};
+		FFDED9040C2DA1EF93AE238D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FFE1E8AB37C9A152BC94542A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FFE2B3FD500442859590CBAC /* Components */,
+				FFAD0E44C858749305DFEE8A /* DesignSystem */,
+				FFC2BD0EFAAF02073141CC99 /* Extensions */,
+				FF1F87AD8576C9DD7E5577DD /* Helpers */,
+				FF26B35BC86B1E9D1BA93FB0 /* Managers */,
+				FF7DAED697FBE775F9B2541C /* Models */,
+				FF334907327C76183D4B9BA2 /* Services */,
+				FFBEEDFE83FB85F0577839B3 /* Utilities */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FFE2B3FD500442859590CBAC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FF16B767504B1756DCA75B66 /* CapabilityBadge.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FFE3B3A746B90ACF7EB921E8 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				FFFE99B9FABD69DA27D5F0A9 /* Fishing */,
+				FFB91E9DD7595F2F8A481F97 /* Home */,
+				FF7C6F313A69A102A8217A1A /* Inventory */,
+				FF9EB51B5A10BE179D5D9A0D /* Profile */,
+				FFF2557ACBE2D22EBAA68138 /* ScreenTime */,
+				FF1D48569E08CED9AE12C689 /* Settings */,
+				FF99446392EF2D30FA304802 /* Task */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		FFE995C15C3AF4BDA08DED42 /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				FE5FF6EA78DFEAA95C04B879 /* BreakControlIntents.swift */,
+			);
+			path = Intents;
+			sourceTree = "<group>";
+		};
+		FFECA433C497E341A9E2FD32 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FEB903C99E4DC6FCBC2B1B2B /* AppGroup.swift */,
+				FD69F6486A4FED83AD50B7E6 /* BrandColors.swift */,
+				FE34C638D044D022E8178B1E /* BreakDurations.swift */,
+				FEC85C3C10CA79A822222CD2 /* DeviceActivityNames.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		FFEDFD1F0B4DFE2E5C82CBBE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FFF07D5DAA0590FE45E5919F /* Radius */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Radius;
+			sourceTree = "<group>";
+		};
+		FFF2557ACBE2D22EBAA68138 /* ScreenTime */ = {
+			isa = PBXGroup;
+			children = (
+				FF790C4FD9DE56D26B566BD5 /* Intents */,
+				FF21FF5C9A7B7061450D6A36 /* Views */,
+			);
+			path = ScreenTime;
+			sourceTree = "<group>";
+		};
+		FFF9FFAAD9E36262FABB1E35 /* Sea */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sea;
+			sourceTree = "<group>";
+		};
+		FFFC13133CA60D4907EC928C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FEDE0B95A1DFC9095799CEA9 /* BreakLiveActivity.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FFFE99B9FABD69DA27D5F0A9 /* Fishing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fishing;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1280,6 +884,74 @@
 			productName = "C4-MIRACLE";
 			productReference = 4E54CD38301F81CF00F4E8B1 /* C4-MIRACLE.app */;
 			productType = "com.apple.product-type.application";
+		};
+		FE089A5A535F21CBC70F25B6 /* DeviceActivityMonitorExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEA302D5F6A743D277135CF1 /* Build configuration list for PBXNativeTarget "DeviceActivityMonitorExtension" */;
+			buildPhases = (
+				FE9741DF84606B6F448D5EE4 /* Sources */,
+				FEF093F4A58D334193DE2257 /* Frameworks */,
+				FEF0D479496326F4186B2527 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeviceActivityMonitorExtension;
+			productName = DeviceActivityMonitorExtension;
+			productReference = FE7DF867ABE9FAECFF93263F /* DeviceActivityMonitorExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		FE0D4CBB657030DD010DBE6A /* ShieldActionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE5D1DBA46442FF60549E305 /* Build configuration list for PBXNativeTarget "ShieldActionExtension" */;
+			buildPhases = (
+				FE98A52381681964F885E101 /* Sources */,
+				FE875743F8A732B53566A807 /* Frameworks */,
+				FECAD7742FE3DAF71EF79DCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShieldActionExtension;
+			productName = ShieldActionExtension;
+			productReference = FEE7913A6680398500FFF352 /* ShieldActionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		FE35C3E4AE97E098A169D3C6 /* MiracleLiveActivity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE630B5A33D5A5FCA3ED0861 /* Build configuration list for PBXNativeTarget "MiracleLiveActivity" */;
+			buildPhases = (
+				FE08872A1D310622202A3081 /* Sources */,
+				FE0B5611ECD410D6ECD3D33C /* Frameworks */,
+				FE1A8E2D5DE85804DFD2FF5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MiracleLiveActivity;
+			productName = MiracleLiveActivity;
+			productReference = FE4F8E28698A30F59259B9D6 /* MiracleLiveActivity.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		FEE0E9BF0B4B10C11F8217A3 /* ShieldConfigurationExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE76260F368533028C173ADD /* Build configuration list for PBXNativeTarget "ShieldConfigurationExtension" */;
+			buildPhases = (
+				FE4414816D870A47F8DFACAB /* Sources */,
+				FEFC0A9D6E6A8A15CACDA73F /* Frameworks */,
+				FEE9A7264FDAFDC5338770BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShieldConfigurationExtension;
+			productName = ShieldConfigurationExtension;
+			productReference = FE6C8F1F2A8D7424FA0DBEEE /* ShieldConfigurationExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -1324,7 +996,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F93D2CA13029AA51001F548E /* PandiParker.icon in Resources */,
 				FFA0719DE76E706721878A39 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE1A8E2D5DE85804DFD2FF5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FECAD7742FE3DAF71EF79DCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEE9A7264FDAFDC5338770BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE425D49159A7EBCB4918031 /* Media.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEF0D479496326F4186B2527 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1335,6 +1037,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB2E4B09B983FF431F6B790 /* HomeView.swift in Sources */,
+				FC3DF2E8E71D76FEB3C8E5B7 /* DailyRecap.swift in Sources */,
+				FD3C16F4709617D0A9F571C3 /* BrandColors.swift in Sources */,
 				FFA9E7A16C965B37D0C13639 /* AppState.swift in Sources */,
 				FF8490293B6F7011867C9410 /* MiracleAppShortcuts.swift in Sources */,
 				FFD7C7B9335520FFB80E3B6D /* RootView.swift in Sources */,
@@ -1347,6 +1052,7 @@
 				FF2C908D3FA8B616FDA3E60C /* OnboardingView.swift in Sources */,
 				FFDE214FF3045188C9BFAFED /* PermissionSetupView.swift in Sources */,
 				FF3B4E2397CE1D35D93F3802 /* WorkModeView.swift in Sources */,
+				F99148603029D5ED005D413C /* ProfileView.swift in Sources */,
 				FFF0CD8BDF273E6C6C4F0B25 /* DiagnosticsView.swift in Sources */,
 				FF667833C89FA786E227D50B /* AppGroup.swift in Sources */,
 				FF205BD00076C74F29D94CBF /* BreakDurations.swift in Sources */,
@@ -1360,7 +1066,100 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FE08872A1D310622202A3081 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDF68A77876038DAF9BF636C /* BrandColors.swift in Sources */,
+				FE27B32934963619B0FC40EA /* MiracleLiveActivityBundle.swift in Sources */,
+				FE3ED6766E8F43149C2B1F18 /* BreakLiveActivity.swift in Sources */,
+				FEFAF03B1ED148560C600B9F /* AppGroup.swift in Sources */,
+				FE34D2981DB58CB05A297E9E /* BreakDurations.swift in Sources */,
+				FE5ECC6FDD020B0D6F8CE42D /* DeviceActivityNames.swift in Sources */,
+				FEEF0690D3D6D6A388DD6A26 /* BreakActivityAttributes.swift in Sources */,
+				FECA891A52D3FE338F3067D9 /* BreakModels.swift in Sources */,
+				FEEFF4CB0F92AD7185827652 /* LiveActivityService.swift in Sources */,
+				FE6272DBC108D0F3283CF6FA /* SharedStore.swift in Sources */,
+				FE6AF71D607D52A6C2B8E2C9 /* TokenBox.swift in Sources */,
+				FE428928BCEFB812804E1778 /* BreakControlIntents.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE4414816D870A47F8DFACAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDB54F5713BEEBC5F676E09C /* BrandColors.swift in Sources */,
+				FE92644C7B160ACEAAD70207 /* ShieldConfigurationExtension.swift in Sources */,
+				FE4A77DCF7C59448CF416B9A /* AppGroup.swift in Sources */,
+				FE5A72F20883B3FF8362AF16 /* BreakDurations.swift in Sources */,
+				FEA79964F895C2028480953A /* DeviceActivityNames.swift in Sources */,
+				FE45C2751CBF1550A5E4429F /* BreakActivityAttributes.swift in Sources */,
+				FE3F8488AD50B3EFDF2ECCDB /* BreakModels.swift in Sources */,
+				FEDB59753D98FC8A3573F143 /* LiveActivityService.swift in Sources */,
+				FEFEC2D223DD04231317DF1C /* SharedStore.swift in Sources */,
+				FEB2831F7A5415F89A589D99 /* TokenBox.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE9741DF84606B6F448D5EE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDE15B1409F5836C7F23FC9C /* BrandColors.swift in Sources */,
+				FEFEFCA61254891430155C1E /* DeviceActivityMonitorExtension.swift in Sources */,
+				FE1A36CFDB33B3CB3685EC8E /* AppGroup.swift in Sources */,
+				FE8D17C8454D2832F0841614 /* BreakDurations.swift in Sources */,
+				FE30D3948D77ABDC432A0BC1 /* DeviceActivityNames.swift in Sources */,
+				FEBBABBEA3EC06914F6CA0E6 /* BreakActivityAttributes.swift in Sources */,
+				FE42EA19B9A8F7F1362BB76A /* BreakModels.swift in Sources */,
+				FE52617BBA39DF5840D859CE /* LiveActivityService.swift in Sources */,
+				FEC7D86FDE84542674250BFD /* SharedStore.swift in Sources */,
+				FE66DA10A3DA429A3E3F87AE /* TokenBox.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE98A52381681964F885E101 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD4CB10E0EA1D6C2FD791C23 /* BrandColors.swift in Sources */,
+				FE191621850E677692FDE7FF /* ShieldActionExtension.swift in Sources */,
+				FE652043396EB01785443F96 /* AppGroup.swift in Sources */,
+				FE0D4DA44E98FE46DB1A6F3F /* BreakDurations.swift in Sources */,
+				FEF43554554562F54EAB4C49 /* DeviceActivityNames.swift in Sources */,
+				FE46BA1AE82730D3EC66E3D5 /* BreakActivityAttributes.swift in Sources */,
+				FE7307B93FB631FBAAF46252 /* BreakModels.swift in Sources */,
+				FE3EA4099F3DB1EB47B1971F /* LiveActivityService.swift in Sources */,
+				FED5AC37FF106027D868E093 /* SharedStore.swift in Sources */,
+				FEEEC46C58B8391016D1E500 /* TokenBox.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE197A2AB6CB0BBD7C6F61AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE35C3E4AE97E098A169D3C6 /* MiracleLiveActivity */;
+			targetProxy = FEF48CBBEC85235CDECE96FA /* PBXContainerItemProxy */;
+		};
+		FE44E50FEB999B3CE5CB5AD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE089A5A535F21CBC70F25B6 /* DeviceActivityMonitorExtension */;
+			targetProxy = FE0ADB2DABF94ACBBB4E7D48 /* PBXContainerItemProxy */;
+		};
+		FE8698F860D6D9283A7D18AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FEE0E9BF0B4B10C11F8217A3 /* ShieldConfigurationExtension */;
+			targetProxy = FEEF3BF7277BD35764707907 /* PBXContainerItemProxy */;
+		};
+		FEC81AE766867141A558BA56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE0D4CBB657030DD010DBE6A /* ShieldActionExtension */;
+			targetProxy = FED5F4F8CD42BBD9EFBAF90E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4E54CD41301F81CF00F4E8B1 /* Debug */ = {
@@ -1485,8 +1284,9 @@
 		4E54CD44301F81CF00F4E8B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = PandiParker;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "C4-MIRACLE/Resources/C4-MIRACLE.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1519,8 +1319,9 @@
 		4E54CD45301F81CF00F4E8B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = PandiParker;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "C4-MIRACLE/Resources/C4-MIRACLE.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1550,6 +1351,206 @@
 			};
 			name = Release;
 		};
+		FE0689378DCA5F77F56BB70B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_ENTITLEMENTS = "C4-MIRACLE/Targets/ShieldActionExtension/ShieldActionExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H37C5FSRQW;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "C4-MIRACLE/Targets/ShieldActionExtension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.berzki.Miracle.ShieldAction;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FE08CF255C8EDE9F936984FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_ENTITLEMENTS = "C4-MIRACLE/Targets/ShieldActionExtension/ShieldActionExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H37C5FSRQW;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "C4-MIRACLE/Targets/ShieldActionExtension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.berzki.Miracle.ShieldAction;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FE36A7E71B974C911C8EE3D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_ENTITLEMENTS = "C4-MIRACLE/Targets/LiveActivityExtension/MiracleLiveActivity.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H37C5FSRQW;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "C4-MIRACLE/Targets/LiveActivityExtension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.berzki.Miracle.LiveActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FE461D8511612A6F89373D6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_ENTITLEMENTS = "C4-MIRACLE/Targets/ShieldExtension/ShieldConfigurationExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H37C5FSRQW;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "C4-MIRACLE/Targets/ShieldExtension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.berzki.Miracle.ShieldConfiguration;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FE52778040BF55D993C55526 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_ENTITLEMENTS = "C4-MIRACLE/Targets/ShieldExtension/ShieldConfigurationExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H37C5FSRQW;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "C4-MIRACLE/Targets/ShieldExtension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.berzki.Miracle.ShieldConfiguration;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FE5D88A0EA6FEA5DB2258665 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_ENTITLEMENTS = "C4-MIRACLE/Targets/LiveActivityExtension/MiracleLiveActivity.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H37C5FSRQW;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "C4-MIRACLE/Targets/LiveActivityExtension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.berzki.Miracle.LiveActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FEA855085DBC31C48FF89668 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_ENTITLEMENTS = "C4-MIRACLE/Targets/DeviceActivityMonitorExtension/DeviceActivityMonitorExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H37C5FSRQW;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "C4-MIRACLE/Targets/DeviceActivityMonitorExtension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.berzki.Miracle.Monitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FEB3C3DC18A425F82D7874FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_ENTITLEMENTS = "C4-MIRACLE/Targets/DeviceActivityMonitorExtension/DeviceActivityMonitorExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H37C5FSRQW;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "C4-MIRACLE/Targets/DeviceActivityMonitorExtension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.berzki.Miracle.Monitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1567,6 +1568,42 @@
 			buildConfigurations = (
 				4E54CD44301F81CF00F4E8B1 /* Debug */,
 				4E54CD45301F81CF00F4E8B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE5D1DBA46442FF60549E305 /* Build configuration list for PBXNativeTarget "ShieldActionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE08CF255C8EDE9F936984FF /* Debug */,
+				FE0689378DCA5F77F56BB70B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE630B5A33D5A5FCA3ED0861 /* Build configuration list for PBXNativeTarget "MiracleLiveActivity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE36A7E71B974C911C8EE3D2 /* Debug */,
+				FE5D88A0EA6FEA5DB2258665 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE76260F368533028C173ADD /* Build configuration list for PBXNativeTarget "ShieldConfigurationExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE52778040BF55D993C55526 /* Debug */,
+				FE461D8511612A6F89373D6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEA302D5F6A743D277135CF1 /* Build configuration list for PBXNativeTarget "DeviceActivityMonitorExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEB3C3DC18A425F82D7874FC /* Debug */,
+				FEA855085DBC31C48FF89668 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

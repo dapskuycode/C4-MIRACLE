@@ -14,7 +14,7 @@ struct RootView: View {
     var body: some View {
         Group {
             if state.hasOnboarded {
-                WorkModeView()
+                HomeView()
             } else {
                 OnboardingView()
             }

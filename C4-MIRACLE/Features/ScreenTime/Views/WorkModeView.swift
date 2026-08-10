@@ -22,8 +22,9 @@ struct WorkModeView: View {
     }
 
     var body: some View {
-        NavigationStack {
-            Form {
+        // No NavigationStack of its own: this screen is pushed from HomeView, and nesting one
+        // stack inside another breaks the back button and the large-title behaviour.
+        Form {
                 Section {
                     if state.isWorkModeActive {
                         // Work Mode stays on during a break — the shields are lifted, not the
@@ -61,7 +62,7 @@ struct WorkModeView: View {
                     Section {
                         LabeledContent("Opened from", value: grant.appName)
                         LabeledContent("Duration", value: BreakDurations.label(grant.durationSeconds))
-                        LabeledContent("Context", value: grant.contextNote.isEmpty ? "—" : grant.contextNote)
+                        LabeledContent("Next task", value: grant.nextTask.isEmpty ? "—" : grant.nextTask)
                         LabeledContent("Ends") { Text(grant.expiresAt, style: .relative) }
                         Button("End Break Now", role: .destructive) {
                             screenTime.revokeExpiredGrant(reason: "ended manually", expired: false)
@@ -145,16 +146,16 @@ struct WorkModeView: View {
                 } header: {
                     Text("More")
                 }
-            }
-            .navigationTitle("C4-MIRACLE")
-            .familyActivityPicker(
-                headerText: "Pick Social, Games and Entertainment — or individual apps.",
-                isPresented: $showPicker,
-                selection: $screenTime.selection
-            )
-            .onChange(of: showPicker) { _, isShowing in
-                if !isShowing { screenTime.persistSelection() }
-            }
+        }
+        .navigationTitle("Settings")
+        .navigationBarTitleDisplayMode(.inline)
+        .familyActivityPicker(
+            headerText: "Pick Social, Games and Entertainment — or individual apps.",
+            isPresented: $showPicker,
+            selection: $screenTime.selection
+        )
+        .onChange(of: showPicker) { _, isShowing in
+            if !isShowing { screenTime.persistSelection() }
         }
     }
 }

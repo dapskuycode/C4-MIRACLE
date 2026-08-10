@@ -125,7 +125,7 @@ struct DiagnosticsView: View {
                         VStack(alignment: .leading) {
                             Text("\(grant.appName) — \(BreakDurations.label(grant.durationSeconds))")
                                 .font(.subheadline)
-                            Text(grant.contextNote.isEmpty ? "no context" : grant.contextNote)
+                            Text(grant.nextTask.isEmpty ? "no next task" : grant.nextTask)
                                 .font(.caption)
                                 .foregroundStyle(.secondary)
                         }

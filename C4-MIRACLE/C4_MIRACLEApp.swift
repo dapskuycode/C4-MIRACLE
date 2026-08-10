@@ -21,8 +21,6 @@ struct C4_MIRACLEApp: App {
                 .environmentObject(screenTime)
                 .onOpenURL { state.handle(url: $0) }
                 .onChange(of: scenePhase) { _, phase in
-                    // The only reliable moment to pick up whatever the shield extensions left
-                    // for us in the App Group while we weren't running.
                     guard phase == .active else { return }
                     screenTime.refreshAuthorizationStatus()
                     state.refresh()

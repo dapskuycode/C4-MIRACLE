@@ -71,10 +71,12 @@ class ShieldConfigurationExtension: ShieldConfigurationDataSource {
 
     // MARK: - Icon
 
-    /// The shield's icon is a plain `UIImage?`, so any artwork works — drop a PNG or PDF named
-    /// `ShieldIcon` into `Assets/Media.xcassets` **in this extension's target**. It has to be
-    /// in the extension's own bundle, not the app's: this process draws the shield, and it
-    /// cannot read the app's resources.
+    /// The fishing artwork.
+    ///
+    /// It has to be in **this extension's** asset catalog, not the app's: this process draws
+    /// the shield and cannot read the app's resources. `Targets/ShieldExtension/Assets/
+    /// Media.xcassets/ShieldIcon` is a copy of `Assets.xcassets/Image/Character/Fishing` —
+    /// if the illustration changes, both copies have to change.
     ///
     /// An animated GIF will not work. `ShieldConfiguration` is a value the system renders once
     /// into its own UI; there is no view of ours running, no timer, and iOS caches the
@@ -92,18 +94,25 @@ class ShieldConfigurationExtension: ShieldConfigurationDataSource {
     /// rendered shield, so it kept showing the original text after the flag changed, while
     /// ShieldAction acted on the new value. The two disagreed and the button misbehaved.
     /// Anything that has to change in response to state belongs in the Live Activity.
+    ///
+    /// The design's two stacked headings cannot both be rendered — the shield offers exactly
+    /// one title and one subtitle — so the copy is the pair that carries the decision.
+    /// `name` is unused for the same reason: the subtitle is fixed text by design.
     private func shield(for name: String) -> ShieldConfiguration {
         ShieldConfiguration(
-            backgroundBlurStyle: .systemUltraThinMaterialDark,
-            backgroundColor: UIColor.black.withAlphaComponent(0.55),
+            backgroundBlurStyle: .systemUltraThinMaterialLight,
+            backgroundColor: BrandColors.UI.shieldBackground,
             icon: Self.shieldIcon,
-            title: ShieldConfiguration.Label(text: "C4-MIRACLE", color: .white),
+            title: ShieldConfiguration.Label(text: "Taking a break?", color: BrandColors.UI.ink),
             subtitle: ShieldConfiguration.Label(
-                text: "Work Mode is on.\nYou're trying to open \(name).",
-                color: UIColor.white.withAlphaComponent(0.85)
+                text: "Set your time and decide\nwhat's next",
+                color: BrandColors.UI.muted
             ),
-            primaryButtonLabel: ShieldConfiguration.Label(text: "Take a break", color: .black),
-            primaryButtonBackgroundColor: .white
+            primaryButtonLabel: ShieldConfiguration.Label(
+                text: "Take a Break",
+                color: BrandColors.UI.onAccent
+            ),
+            primaryButtonBackgroundColor: BrandColors.UI.accent
         )
     }
 }

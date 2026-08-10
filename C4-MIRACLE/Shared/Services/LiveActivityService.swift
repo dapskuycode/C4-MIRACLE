@@ -30,7 +30,7 @@ enum LiveActivityService {
         let state = BreakActivityAttributes.ContentState(
             startedAt: grant.grantedAt,
             endsAt: grant.expiresAt,
-            contextNote: grant.contextNote
+            nextTask: grant.nextTask
         )
 
         do {

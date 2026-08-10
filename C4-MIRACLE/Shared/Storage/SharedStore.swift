@@ -50,8 +50,11 @@ enum SharedStore {
         set { write(newValue, Key.activeGrant) }
     }
 
-    static func clearActiveGrant() {
-        if let grant = activeGrant {
+    /// - Parameter outcome: how the break ended, stamped onto the archived copy. The history
+    ///   is what the home screen's daily recap counts, so an unstamped grant is invisible to it.
+    static func clearActiveGrant(outcome: BreakOutcome? = nil) {
+        if var grant = activeGrant {
+            grant.outcome = outcome
             var history: [BreakGrant] = read(Key.grantHistory) ?? []
             history.insert(grant, at: 0)
             write(Array(history.prefix(20)), Key.grantHistory)

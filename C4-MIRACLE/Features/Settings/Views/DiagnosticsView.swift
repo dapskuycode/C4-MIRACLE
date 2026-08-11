@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-/// The evidence trail. Four separate processes write here, and this is the only place you can
-/// see them on one timeline — extensions cannot be attached to the Xcode debugger in any
-/// convenient way, so this substitutes for a console.
-///
-/// **Keep this screen.** Without it, extension bugs are close to undiagnosable.
 struct DiagnosticsView: View {
 
     @EnvironmentObject private var screenTime: ScreenTimeService

@@ -8,7 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		F93D2CA13029AA51001F548E /* PandiParker.icon in Resources */ = {isa = PBXBuildFile; fileRef = F93D2CA03029AA51001F548E /* PandiParker.icon */; };
-		F99148603029D5ED005D413C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991485F3029D5ED005D413C /* ProfileView.swift */; };
+		F9FE2E8A302AFE36000E0C79 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FE2E89302AFE33000E0C79 /* Font.swift */; };
+		F9FE2E8B302AFE36000E0C79 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FE2E89302AFE33000E0C79 /* Font.swift */; };
+		F9FE2E8C302AFE36000E0C79 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FE2E89302AFE33000E0C79 /* Font.swift */; };
+		F9FE2E8D302AFE36000E0C79 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FE2E89302AFE33000E0C79 /* Font.swift */; };
+		F9FE2E8E302AFE36000E0C79 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FE2E89302AFE33000E0C79 /* Font.swift */; };
+		FB9685BFE13246F94093EA9A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB69F6486A4FED83AD50B7E6 /* SettingsView.swift */; };
 		FC3DF2E8E71D76FEB3C8E5B7 /* DailyRecap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC506E5EBC3FF51DF20119EA /* DailyRecap.swift */; };
 		FCB2E4B09B983FF431F6B790 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9A3E2874A78171D366948 /* HomeView.swift */; };
 		FD3C16F4709617D0A9F571C3 /* BrandColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD69F6486A4FED83AD50B7E6 /* BrandColors.swift */; };
@@ -135,7 +140,8 @@
 /* Begin PBXFileReference section */
 		4E54CD38301F81CF00F4E8B1 /* C4-MIRACLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "C4-MIRACLE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F93D2CA03029AA51001F548E /* PandiParker.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = PandiParker.icon; sourceTree = "<group>"; };
-		F991485F3029D5ED005D413C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F9FE2E89302AFE33000E0C79 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		FB69F6486A4FED83AD50B7E6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		FC506E5EBC3FF51DF20119EA /* DailyRecap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyRecap.swift; sourceTree = "<group>"; };
 		FCF9A3E2874A78171D366948 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FD69F6486A4FED83AD50B7E6 /* BrandColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandColors.swift; sourceTree = "<group>"; };
@@ -379,6 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				FFF042F0A275E3ACFD0E008F /* DiagnosticsView.swift */,
+				FB69F6486A4FED83AD50B7E6 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -517,6 +524,7 @@
 		FF9D63F942DF0302EF212950 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
+				FD69F6486A4FED83AD50B7E6 /* BrandColors.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -550,7 +558,6 @@
 		FF9EB51B5A10BE179D5D9A0D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				F991485F3029D5ED005D413C /* ProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -705,6 +712,7 @@
 		FFD4423880C6F72747DB2918 /* Typography */ = {
 			isa = PBXGroup;
 			children = (
+				F9FE2E89302AFE33000E0C79 /* Font.swift */,
 			);
 			path = Typography;
 			sourceTree = "<group>";
@@ -806,7 +814,6 @@
 			isa = PBXGroup;
 			children = (
 				FEB903C99E4DC6FCBC2B1B2B /* AppGroup.swift */,
-				FD69F6486A4FED83AD50B7E6 /* BrandColors.swift */,
 				FE34C638D044D022E8178B1E /* BreakDurations.swift */,
 				FEC85C3C10CA79A822222CD2 /* DeviceActivityNames.swift */,
 			);
@@ -1052,14 +1059,15 @@
 				FF2C908D3FA8B616FDA3E60C /* OnboardingView.swift in Sources */,
 				FFDE214FF3045188C9BFAFED /* PermissionSetupView.swift in Sources */,
 				FF3B4E2397CE1D35D93F3802 /* WorkModeView.swift in Sources */,
-				F99148603029D5ED005D413C /* ProfileView.swift in Sources */,
 				FFF0CD8BDF273E6C6C4F0B25 /* DiagnosticsView.swift in Sources */,
+				FB9685BFE13246F94093EA9A /* SettingsView.swift in Sources */,
 				FF667833C89FA786E227D50B /* AppGroup.swift in Sources */,
 				FF205BD00076C74F29D94CBF /* BreakDurations.swift in Sources */,
 				FFDE1D6B09FB8E734F99E7AE /* DeviceActivityNames.swift in Sources */,
 				FF732AABE80937C011AE1A9F /* BreakControlIntents.swift in Sources */,
 				FF5991DA0309269D8C4AE93F /* BreakActivityAttributes.swift in Sources */,
 				FFCC938AA38BA9FDE0BD361C /* BreakModels.swift in Sources */,
+				F9FE2E8E302AFE36000E0C79 /* Font.swift in Sources */,
 				FF88776D19D201B05C4BC26F /* LiveActivityService.swift in Sources */,
 				FFC92CCAF59D84E8377C9341 /* SharedStore.swift in Sources */,
 				FF1A2955A4B0F8C5DE934217 /* TokenBox.swift in Sources */,
@@ -1077,6 +1085,7 @@
 				FE34D2981DB58CB05A297E9E /* BreakDurations.swift in Sources */,
 				FE5ECC6FDD020B0D6F8CE42D /* DeviceActivityNames.swift in Sources */,
 				FEEF0690D3D6D6A388DD6A26 /* BreakActivityAttributes.swift in Sources */,
+				F9FE2E8A302AFE36000E0C79 /* Font.swift in Sources */,
 				FECA891A52D3FE338F3067D9 /* BreakModels.swift in Sources */,
 				FEEFF4CB0F92AD7185827652 /* LiveActivityService.swift in Sources */,
 				FE6272DBC108D0F3283CF6FA /* SharedStore.swift in Sources */,
@@ -1090,6 +1099,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDB54F5713BEEBC5F676E09C /* BrandColors.swift in Sources */,
+				F9FE2E8B302AFE36000E0C79 /* Font.swift in Sources */,
 				FE92644C7B160ACEAAD70207 /* ShieldConfigurationExtension.swift in Sources */,
 				FE4A77DCF7C59448CF416B9A /* AppGroup.swift in Sources */,
 				FE5A72F20883B3FF8362AF16 /* BreakDurations.swift in Sources */,
@@ -1107,6 +1117,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDE15B1409F5836C7F23FC9C /* BrandColors.swift in Sources */,
+				F9FE2E8D302AFE36000E0C79 /* Font.swift in Sources */,
 				FEFEFCA61254891430155C1E /* DeviceActivityMonitorExtension.swift in Sources */,
 				FE1A36CFDB33B3CB3685EC8E /* AppGroup.swift in Sources */,
 				FE8D17C8454D2832F0841614 /* BreakDurations.swift in Sources */,
@@ -1124,6 +1135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD4CB10E0EA1D6C2FD791C23 /* BrandColors.swift in Sources */,
+				F9FE2E8C302AFE36000E0C79 /* Font.swift in Sources */,
 				FE191621850E677692FDE7FF /* ShieldActionExtension.swift in Sources */,
 				FE652043396EB01785443F96 /* AppGroup.swift in Sources */,
 				FE0D4DA44E98FE46DB1A6F3F /* BreakDurations.swift in Sources */,

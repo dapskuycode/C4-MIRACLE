@@ -8,23 +8,9 @@
 import SwiftUI
 import UIKit
 
-/// The handful of colours the break flow needs.
-///
-/// This is **not** the Design System — that belongs in `Core/DesignSystem/` once the team
-/// defines it. These live in `Shared/` out of necessity: the block screen is drawn by the
-/// shield extension in UIKit, the break screen by the app in SwiftUI, and the two must not
-/// drift apart. One definition, two accessors.
 enum BrandColors {
-
-    // ⚠️ Sampled by eye from the design mockup. Replace with the exact values from the
-    // design file — these are a starting point, not a decision.
     private static let accentHex: UInt32 = 0x25B6A6
-    /// Bottom scrim on the home screen — "Rectangle 3" in the design, a 300pt gradient from
-    /// this colour at 0% alpha down to full.
     private static let homeScrimHex: UInt32 = 0x005952
-    /// The water at the very bottom of the home artwork, recovered from a render by undoing
-    /// the scrim it sits under. Starting the backdrop here keeps the artwork's edge from
-    /// showing as a hard line.
     private static let homeWaterHex: UInt32 = 0x84D2CC
     private static let inkHex: UInt32 = 0x111111
     private static let mutedHex: UInt32 = 0x6E6E73
@@ -37,7 +23,6 @@ enum BrandColors {
         static let onAccent = UIColor.white
         static let ink = UIColor(brandHex: inkHex)
         static let muted = UIColor(brandHex: mutedHex)
-        /// The block screen is drawn over another app, so it needs its own opaque ground.
         static let shieldBackground = UIColor.white.withAlphaComponent(0.94)
     }
 

@@ -25,17 +25,26 @@ struct HomeView: View {
         return grant.isActive
     }
 
+    @State private var isConfirmingEnd = false
+
     var body: some View {
         NavigationStack {
-            ZStack(alignment: .bottom) {
-                backgroundFill
-                background
-                bottomScrim
-                controls
+            ZStack {
+                if state.isWorkModeActive {
+                    workingSession
+                } else {
+                    idleHome
+                }
+
+                if isConfirmingEnd {
+                    endConfirmation
+                }
             }
+            .animation(.easeInOut(duration: 0.25), value: state.isWorkModeActive)
+            .animation(.easeInOut(duration: 0.25), value: isConfirmingEnd)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    NavigationLink { WorkModeView() } label: {
+                    NavigationLink { SettingsView() } label: {
                         Image(systemName: "gearshape.fill")
                             .font(.system(size: 17, weight: .semibold))
                             .foregroundStyle(BrandColors.ink)
@@ -46,6 +55,122 @@ struct HomeView: View {
             .toolbarBackground(.hidden, for: .navigationBar)
             .onAppear { recap = loadRecap() }
         }
+    }
+
+    // MARK: - Idle
+
+    private var idleHome: some View {
+        ZStack(alignment: .bottom) {
+            backgroundFill
+            background
+            bottomScrim
+            controls
+        }
+    }
+
+    // MARK: - Working session
+    private var workingSession: some View {
+        VStack(spacing: 0) {
+            workingArtwork
+                .scaledToFit()
+                .frame(maxHeight: 260)
+                .padding(.horizontal, 24)
+                .padding(.top, 16)
+                .accessibilityHidden(true)
+
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Have a great work session!")
+                    .font(.title3.bold())
+                    .foregroundStyle(BrandColors.ink)
+
+                Text("You can back to work, and we'll see you at your next break")
+                    .font(.subheadline)
+                    .foregroundStyle(BrandColors.ink)
+                    .fixedSize(horizontal: false, vertical: true)
+
+                Spacer(minLength: 32)
+
+                Button { isConfirmingEnd = true } label: {
+                    Text("End Work")
+                        .font(.body.weight(.semibold))
+                        .foregroundStyle(BrandColors.onAccent)
+                        .frame(maxWidth: .infinity, minHeight: 56)
+                        .background(BrandColors.accent, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+                }
+                .buttonStyle(.plain)
+                .padding(.bottom, 8)
+            }
+            .padding(24)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+            .background(
+                BrandColors.surface,
+                in: UnevenRoundedRectangle(topLeadingRadius: 28, topTrailingRadius: 28, style: .continuous)
+            )
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color(.systemBackground))
+        .ignoresSafeArea(edges: .bottom)
+    }
+
+    private var workingArtwork: some View {
+        Group {
+            if let outline = UIImage(named: "FishingOutline") {
+                Image(uiImage: outline).resizable()
+            } else {
+                Image(.fishing).resizable()
+            }
+        }
+    }
+
+    /// Ending a session unblocks everything, so it asks first.
+    private var endConfirmation: some View {
+        ZStack {
+            Color.black.opacity(0.35)
+                .ignoresSafeArea()
+                .onTapGesture { isConfirmingEnd = false }
+
+            VStack(spacing: 10) {
+                Image(.fishing)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(maxHeight: 78)
+                    .accessibilityHidden(true)
+
+                Text("End your work session?")
+                    .font(.subheadline.bold())
+                    .foregroundStyle(BrandColors.ink)
+                    .multilineTextAlignment(.center)
+
+                HStack(spacing: 10) {
+                    Button { isConfirmingEnd = false } label: {
+                        Text("Cancel")
+                            .font(.footnote.weight(.semibold))
+                            .foregroundStyle(BrandColors.ink)
+                            .frame(maxWidth: .infinity, minHeight: 40)
+                    }
+                    .buttonStyle(.plain)
+
+                    Button {
+                        isConfirmingEnd = false
+                        state.endWorkMode()
+                        recap = loadRecap()
+                    } label: {
+                        Text("End Work")
+                            .font(.footnote.weight(.semibold))
+                            .foregroundStyle(BrandColors.onAccent)
+                            .frame(maxWidth: .infinity, minHeight: 40)
+                            .background(BrandColors.accent, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+                    }
+                    .buttonStyle(.plain)
+                }
+                .padding(.top, 2)
+            }
+            .padding(20)
+            .frame(maxWidth: 260)
+            .background(BrandColors.surface, in: RoundedRectangle(cornerRadius: 20, style: .continuous))
+            .transition(.scale(scale: 0.92).combined(with: .opacity))
+        }
+        .accessibilityAddTraits(.isModal)
     }
 
     // MARK: - Background
@@ -61,7 +186,7 @@ struct HomeView: View {
     }
 
     private var background: some View {
-        Image(.homeTest1)
+        Image(.homeBg)
             .resizable()
             .scaledToFit()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -95,9 +220,10 @@ struct HomeView: View {
         .padding(.bottom, 24)
     }
 
+    /// Only ever starts. Ending happens on the session screen, behind a confirmation.
     private var startButton: some View {
         Button {
-            state.isWorkModeActive ? state.endWorkMode() : state.startWorkMode()
+            state.startWorkMode()
             recap = loadRecap()
         } label: {
             Text(startButtonTitle)
@@ -112,8 +238,7 @@ struct HomeView: View {
 
     private var startButtonTitle: String {
         guard screenTime.isAuthorized else { return "Grant Screen Time access" }
-        if onBreak { return "On a break" }
-        return state.isWorkModeActive ? "End Work" : "Start Work"
+        return "Start Work"
     }
 
     // MARK: - Today's recap

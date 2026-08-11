@@ -8,13 +8,6 @@
 import AppIntents
 import Foundation
 
-/// Exposed to Shortcuts so the user can automate Work Mode itself — by time of day, on
-/// arriving at the office, when connecting to a Focus, and so on. Unlike the "app is opened"
-/// trigger these are conventional triggers that work reliably.
-///
-/// These live in a feature folder rather than `Shared/` on purpose: an `AppIntent` compiled
-/// into two targets exists as two distinct types, and an intent that hands execution to the
-/// app then looks for a type that does not match. Only the app target compiles this file.
 struct StartWorkModeIntent: AppIntent {
 
     static var title: LocalizedStringResource = "Start Work Mode"
@@ -50,7 +43,6 @@ struct EndWorkModeIntent: AppIntent {
     }
 }
 
-/// Ends a break early and re-applies the shield immediately.
 struct EndBreakIntent: AppIntent {
 
     static var title: LocalizedStringResource = "End Break Now"

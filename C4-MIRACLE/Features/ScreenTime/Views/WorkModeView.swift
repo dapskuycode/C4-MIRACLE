@@ -22,14 +22,9 @@ struct WorkModeView: View {
     }
 
     var body: some View {
-        // No NavigationStack of its own: this screen is pushed from HomeView, and nesting one
-        // stack inside another breaks the back button and the large-title behaviour.
         Form {
                 Section {
                     if state.isWorkModeActive {
-                        // Work Mode stays on during a break — the shields are lifted, not the
-                        // session. Showing "Work Mode Active" alone made it look like the
-                        // break hadn't taken effect.
                         LabeledContent("Status") {
                             if onBreak {
                                 Text("On a break").foregroundStyle(.orange).bold()

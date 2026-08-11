@@ -30,7 +30,7 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                if state.isWorkModeActive {
+                if !state.isWorkModeActive {
                     workingSession
                 } else {
                     idleHome
@@ -103,8 +103,8 @@ struct HomeView: View {
             .padding(24)
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             .background(
-                BrandColors.surface,
-                in: UnevenRoundedRectangle(topLeadingRadius: 28, topTrailingRadius: 28, style: .continuous)
+                Color.gray,
+                in: TopCircleShape()
             )
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -119,6 +119,30 @@ struct HomeView: View {
             } else {
                 Image(.fishing).resizable()
             }
+        }
+    }
+    
+    private struct TopCircleShape: Shape {
+        func path(in rect: CGRect) -> Path {
+            var path = Path()
+
+            let curveHeight: CGFloat = 50
+
+            path.move(to: CGPoint(x: rect.minX, y: rect.minY + curveHeight))
+
+            path.addQuadCurve(
+                to: CGPoint(x: rect.maxX, y: rect.minY + curveHeight),
+                control: CGPoint(
+                    x: rect.midX,
+                    y: rect.minY - curveHeight
+                )
+            )
+
+            path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+            path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
+            path.closeSubpath()
+
+            return path
         }
     }
 

@@ -7,14 +7,6 @@
 
 import AppIntents
 
-/// App Shortcuts ARE registered automatically. The moment the app is installed these actions
-/// appear in the Shortcuts app under "C4-MIRACLE" and become available to Siri, with no user
-/// action at all.
-///
-/// What is NOT automatic is an *automation* — the "When Instagram is Opened" trigger. Actions
-/// and automations are different things, and iOS exposes an API for the first and none
-/// whatsoever for the second. It is not needed here anyway: the block screen opens the app
-/// directly.
 struct MiracleAppShortcuts: AppShortcutsProvider {
 
     static var shortcutTileColor: ShortcutTileColor = .navy

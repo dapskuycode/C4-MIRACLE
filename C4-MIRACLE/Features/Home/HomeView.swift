@@ -30,7 +30,7 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                if !state.isWorkModeActive {
+                if state.isWorkModeActive {
                     workingSession
                 } else {
                     idleHome

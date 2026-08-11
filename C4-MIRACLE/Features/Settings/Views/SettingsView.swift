@@ -55,39 +55,39 @@ struct SettingsView: View {
                 startPoint: .topTrailing,
                 endPoint: .bottomLeading
             )
-
+            
             characterArtwork
                 .scaledToFit()
-                .frame(width: 200, height: 200)
+                .frame(width: 200, height: 250)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
-                .offset(x: 40, y: 26)
+                .offset(x: 40, y: 48)
                 .accessibilityHidden(true)
-
-            HStack(spacing: 14) {
-                Button { dismiss() } label: {
-                    Image(systemName: "chevron.left")
-                        .font(.system(size: 17, weight: .semibold))
-                        .foregroundStyle(BrandColors.accent)
-                        .frame(width: 40, height: 40)
-                        .background(.white, in: Circle())
-                }
-                .buttonStyle(.plain)
-                .accessibilityLabel("Back")
-                
+            
+            VStack(spacing: 2) {
                 Spacer()
-                
-                VStack(alignment: .center, spacing: 2) {
-                    Text("Settings")
-                        .font(.largeTitle.bold())
-                        .foregroundStyle(.white)
-                    Text("costumize your journey")
-                        .font(.footnote)
-                        .foregroundStyle(.white.opacity(0.9))
-                }
-                .frame(maxWidth: 200, alignment: .leading)
+                Text("Settings")
+                    .font(.largeTitle.bold())
+                    .foregroundStyle(.white)
+                Text("costumize your journey")
+                    .font(.footnote)
+                    .foregroundStyle(.white.opacity(0.9))
+                Spacer()
             }
-            .padding(.horizontal, 20)
-            .padding(.top, 56)
+            .multilineTextAlignment(.center)
+            .frame(maxWidth: .infinity)
+            .padding(.top, 48)
+
+            Button { dismiss() } label: {
+                Image(systemName: "chevron.left")
+                    .font(.system(size: 17, weight: .semibold))
+                    .foregroundStyle(BrandColors.accent)
+                    .frame(width: 40, height: 40)
+                    .background(.white, in: Circle())
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("Back")
+            .padding(.leading, 20)
+            .padding(.top, 52)
         }
         .frame(height: 250)
         .clipShape(WaveShape())
@@ -258,16 +258,8 @@ struct SettingsView: View {
 
 // MARK: - Header shape
 
-/// The rippled bottom edge of the settings header.
-///
-/// A sine wave rather than hand-placed Bézier curves: `ripples` and `amplitude` then say
-/// exactly what the edge looks like, and an integer ripple count guarantees the curve meets
-/// both corners at the same height instead of leaving a step.
 private struct WaveShape: Shape {
-
-    /// Full crests across the width.
     var ripples: Double = 5
-    /// How far a crest rises above the trough, in points.
     var amplitude: CGFloat = 7
 
     func path(in rect: CGRect) -> Path {

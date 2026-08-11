@@ -78,6 +78,10 @@ class DeviceActivityMonitorExtension: DeviceActivityMonitor {
     /// foreground itself, and this extension gets only a few seconds of runtime. A notification
     /// the user can tap is the supported equivalent.
     private func notifyBreakOver(appName: String, seconds: Int) {
+        guard SharedStore.isResumptionCueEnabled else {
+            SharedStore.log("DeviceActivityMonitor", "Resumption cue is off — staying quiet.")
+            return
+        }
         let content = UNMutableNotificationContent()
         content.title = "Break's over"
         content.body = seconds > 0

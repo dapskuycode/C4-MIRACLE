@@ -27,6 +27,7 @@ enum SharedStore {
         static let lastShielded      = "lastShieldedApp"
         static let breakEnded        = "breakEndedInfo"
         static let endBreakRequested = "endBreakRequested"
+        static let resumptionCue      = "resumptionCueEnabled"
     }
 
     private static let encoder = JSONEncoder()
@@ -122,6 +123,24 @@ enum SharedStore {
     static var endBreakRequested: Bool {
         get { AppGroup.defaults.bool(forKey: Key.endBreakRequested) }
         set { AppGroup.defaults.set(newValue, forKey: Key.endBreakRequested) }
+    }
+
+    // MARK: - Notification preferences
+
+    /// Whether to tell the user when a break has run out.
+    ///
+    /// Read by the app when it schedules the expiry notification *and* by the monitor
+    /// extension when it posts its own — two processes, one switch, which is exactly why it
+    /// lives here rather than in the app's own defaults.
+    ///
+    /// Defaults to on. `UserDefaults.bool` returns false for a key that was never written, so
+    /// the absence of a value has to be checked explicitly or the feature would start off.
+    static var isResumptionCueEnabled: Bool {
+        get {
+            guard AppGroup.defaults.object(forKey: Key.resumptionCue) != nil else { return true }
+            return AppGroup.defaults.bool(forKey: Key.resumptionCue)
+        }
+        set { AppGroup.defaults.set(newValue, forKey: Key.resumptionCue) }
     }
 
     // MARK: - Work mode

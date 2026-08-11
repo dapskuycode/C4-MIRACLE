@@ -410,6 +410,10 @@ final class ScreenTimeService: ObservableObject {
     /// own. Tapping it opens the app, which then reconciles state — the one path that is
     /// guaranteed to close the loop.
     private func scheduleExpiryNotification(for grant: BreakGrant) {
+        guard SharedStore.isResumptionCueEnabled else {
+            SharedStore.log("App", "Resumption cue is off — no expiry notification scheduled.")
+            return
+        }
         let center = UNUserNotificationCenter.current()
         center.removePendingNotificationRequests(withIdentifiers: [Self.expiryNotificationID])
 

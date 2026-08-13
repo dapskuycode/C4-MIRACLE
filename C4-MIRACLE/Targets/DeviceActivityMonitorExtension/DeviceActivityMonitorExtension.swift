@@ -71,7 +71,8 @@ class DeviceActivityMonitorExtension: DeviceActivityMonitor {
         // jarring, so the apps stay open and the Live Activity asks the user to choose.
         SharedStore.log("DeviceActivityMonitor", "Apps left open — waiting for the user to choose.")
 
-        notifyBreakOver(appName: grant.appName, seconds: grant.durationSeconds)
+        // Disabled as per user request: "tidak perlu ada notif setelah waktu selesai"
+        // notifyBreakOver(appName: grant.appName, seconds: grant.durationSeconds)
     }
 
     /// The closest thing to "bring the user back to C4-MIRACLE" that iOS allows: an app cannot

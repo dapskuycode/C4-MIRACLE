@@ -6,13 +6,30 @@
 //
 
 import SwiftUI
+import UserNotifications
+
+final class AppNotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
+    static let shared = AppNotificationDelegate()
+
+    func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        willPresent notification: UNNotification,
+        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
+    ) {
+        completionHandler([.banner, .sound, .list])
+    }
+}
 
 @main
 struct C4_MIRACLEApp: App {
 
     @StateObject private var state = AppState()
-    @StateObject private var screenTime = ScreenTimeService.shared
+    @ObservedObject private var screenTime = ScreenTimeService.shared
     @Environment(\.scenePhase) private var scenePhase
+
+    init() {
+        UNUserNotificationCenter.current().delegate = AppNotificationDelegate.shared
+    }
 
     var body: some Scene {
         WindowGroup {

@@ -17,14 +17,21 @@ import ActivityKit
 enum LiveActivityService {
 
     @discardableResult
-    static func start(grant: BreakGrant) -> Bool {
+    static func start(grant: BreakGrant) async -> Bool {
         guard ActivityAuthorizationInfo().areActivitiesEnabled else {
             SharedStore.log("App", "Live Activities are disabled in Settings — skipping Dynamic Island.")
             return false
         }
 
-        // Only one break runs at a time; clear any leftover from a previous session.
-        end(from: "App")
+        // Only one break runs at a time. Await the end properly — the old fire-and-forget
+        // Task could complete *after* the new activity was created and silently kill it.
+        let existing = Activity<BreakActivityAttributes>.activities
+        for activity in existing {
+            await activity.end(nil, dismissalPolicy: .immediate)
+        }
+        if !existing.isEmpty {
+            SharedStore.log("App", "Ended \(existing.count) old Live Activity before starting new one.")
+        }
 
         let attributes = BreakActivityAttributes(appName: grant.appName)
         let state = BreakActivityAttributes.ContentState(
@@ -51,6 +58,25 @@ enum LiveActivityService {
         }
     }
 
+    /// Triggers 1st auto-expansion when 1 minute remains without changing design.
+    static func alertWarning1MinLeft() {
+        guard let activity = Activity<BreakActivityAttributes>.activities.first else { return }
+        let state = activity.content.state
+        guard !state.isOver else { return }
+
+        Task {
+            await activity.update(
+                ActivityContent(state: state, staleDate: activity.content.staleDate),
+                alertConfiguration: AlertConfiguration(
+                    title: "1 minute left",
+                    body: "Your break is almost over. Get ready to return!",
+                    sound: .default
+                )
+            )
+            SharedStore.log("App", "Live Activity 1-min warning alert sent (1st auto-expand).")
+        }
+    }
+
     /// Flips the countdown into its "over" state and alerts.
     ///
     /// `alertConfiguration` is the only supported way to make the Dynamic Island present
@@ -67,27 +93,21 @@ enum LiveActivityService {
         state.isOver = true
 
         Task {
+            // As per recipe instructions: use staleDate: Date().addingTimeInterval(60)
+            // to ensure the system doesn't immediately ignore the updated state.
             await activity.update(
-                ActivityContent(state: state, staleDate: nil),
+                ActivityContent(state: state, staleDate: Date().addingTimeInterval(60)),
                 alertConfiguration: AlertConfiguration(
                     title: "Break's over",
-                    body: "\(appName) is blocked again.",
+                    body: "It's time to do \(state.nextTask)!",
                     sound: .default
                 )
             )
-            SharedStore.log("App", "Live Activity switched to \"break's over\" with an alert.")
+            SharedStore.log("App", "Live Activity switched to \"break's over\" with an alert to auto-expand.")
         }
     }
 
     /// Removes the countdown entirely.
-    ///
-    /// Called from several processes on purpose. `Activity.activities` only lists activities
-    /// owned by the calling process, and which extensions count as owners is not documented —
-    /// the monitor extension appears not to, which is why the countdown used to hang at 0:00.
-    /// Rather than rely on one of them, every process that plausibly runs at the right moment
-    /// tries, and the log records which one actually managed it.
-    ///
-    /// - Returns: whether any activity was found to end.
     @discardableResult
     static func end(from process: String = "App") -> Bool {
         let activities = Activity<BreakActivityAttributes>.activities
@@ -102,5 +122,18 @@ enum LiveActivityService {
             SharedStore.log(process, "Live Activity ended and dismissed.")
         }
         return true
+    }
+
+    /// Synchronously awaits removal of all live activities (ideal for AppIntents).
+    static func endImmediately(from process: String = "App") async {
+        let activities = Activity<BreakActivityAttributes>.activities
+        guard !activities.isEmpty else {
+            SharedStore.log(process, "No Live Activity visible to end immediately.")
+            return
+        }
+        for activity in activities {
+            await activity.end(nil, dismissalPolicy: .immediate)
+        }
+        SharedStore.log(process, "Live Activity ended immediately.")
     }
 }

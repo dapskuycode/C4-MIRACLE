@@ -30,7 +30,7 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                if !state.isWorkModeActive {
+                if state.isWorkModeActive {
                     workingSession
                 } else {
                     idleHome
@@ -42,17 +42,7 @@ struct HomeView: View {
             }
             .animation(.easeInOut(duration: 0.25), value: state.isWorkModeActive)
             .animation(.easeInOut(duration: 0.25), value: isConfirmingEnd)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    NavigationLink { SettingsView() } label: {
-                        Image(systemName: "gearshape.fill")
-                            .font(.system(size: 17, weight: .semibold))
-                            .foregroundStyle(BrandColors.ink)
-                    }
-                    .accessibilityLabel("Settings")
-                }
-            }
-            .toolbarBackground(.hidden, for: .navigationBar)
+            .toolbar(.hidden, for: .navigationBar) // Hide navigation bar for true full bleed
             .onAppear { recap = loadRecap() }
         }
     }
@@ -60,56 +50,189 @@ struct HomeView: View {
     // MARK: - Idle
 
     private var idleHome: some View {
-        ZStack(alignment: .bottom) {
-            backgroundFill
-            background
-            bottomScrim
-            controls
+        ZStack {
+            // Base fill
+            Color(red: 27/255, green: 107/255, blue: 107/255)
+                .ignoresSafeArea()
+            
+            // Full bleed background Harbor
+            Image("MainFlow_Homepage_Harbor")
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+                .accessibilityHidden(true)
+            
+            // Fade scrim color 1B6B6B at the bottom
+            LinearGradient(
+                colors: [
+                    Color(red: 27/255, green: 107/255, blue: 107/255).opacity(0),
+                    Color(red: 27/255, green: 107/255, blue: 107/255).opacity(0.65),
+                    Color(red: 27/255, green: 107/255, blue: 107/255)
+                ],
+                startPoint: .top,
+                endPoint: .bottom
+            )
+            .frame(height: 380)
+            .frame(maxHeight: .infinity, alignment: .bottom)
+            .ignoresSafeArea()
+            .allowsHitTesting(false)
+            .accessibilityHidden(true)
+            
+            // Layout content on top
+            VStack(spacing: 0) {
+                // Top Custom Header with Settings Gear
+                HStack {
+                    Spacer()
+                    NavigationLink {
+                        SettingsView()
+                    } label: {
+                        Image(systemName: "gearshape.fill")
+                            .font(.system(size: 22, weight: .regular))
+                            .foregroundStyle(.white)
+                            .frame(width: 48, height: 48)
+                            .background(
+                                Circle()
+                                    .fill(.black.opacity(0.35))
+                                    .overlay(
+                                        Circle()
+                                            .stroke(.white.opacity(0.2), lineWidth: 1.5)
+                                    )
+                            )
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityLabel("Settings")
+                }
+                .padding(.horizontal, 24)
+                .padding(.top, 16)
+                
+                Spacer()
+                
+                // Bottom Stack controls
+                VStack(spacing: 14) {
+                    startButton
+                    recapCard
+                }
+                .padding(.horizontal, 20)
+                .padding(.bottom, 36)
+            }
         }
     }
 
     // MARK: - Working session
     private var workingSession: some View {
         VStack(spacing: 0) {
-            workingArtwork
-                .scaledToFit()
-                .frame(maxHeight: 260)
-                .padding(.horizontal, 24)
-                .padding(.top, 16)
-                .accessibilityHidden(true)
-
-            VStack(alignment: .leading, spacing: 8) {
-                Text("Have a great work session!")
-                    .font(.title3.bold())
-                    .foregroundStyle(BrandColors.ink)
-
-                Text("You can back to work, and we'll see you at your next break")
-                    .font(.subheadline)
-                    .foregroundStyle(BrandColors.ink)
-                    .fixedSize(horizontal: false, vertical: true)
-
-                Spacer(minLength: 32)
-
-                Button { isConfirmingEnd = true } label: {
+            // Top half: Illustrative scene
+            GeometryReader { geo in
+                ZStack(alignment: .bottom) {
+                    // 1. Sky background
+                    Image("MainFlow_Langit")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: geo.size.width, height: geo.size.height)
+                        .clipped()
+                    
+                    // 2. Base Sea
+                    Image("MainFlow_LautBase")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: geo.size.width, height: 180, alignment: .top)
+                        .clipped()
+                    
+                    // 3. Island (positioned at the far right corner on the horizon)
+                    Image("MainFlow_Pulau")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 95)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
+                        .offset(x: 25, y: -130)
+                    
+                    // 4. Fisherman (Mancing Biasa - centered, boat floating clearly above water)
+                    fishermanArtwork
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 280)
+                        .offset(x: 0, y: -45)
+                    
+                    // 5. Front Sea (shorter wave layer lapping only at bottom edge of hull)
+                    Image("MainFlow_LautFront")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: geo.size.width, height: 65, alignment: .top)
+                        .clipped()
+                    
+                    // 6. Transition gradient to blend sea bottom into the top of the card
+                    LinearGradient(
+                        colors: [
+                            Color(red: 235/255, green: 245/255, blue: 246/255).opacity(0),
+                            Color(red: 235/255, green: 245/255, blue: 246/255)
+                        ],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                    .frame(width: geo.size.width, height: 40)
+                }
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .ignoresSafeArea(edges: .top)
+            
+            // Bottom half: White Overlay Card with top gradient (raised section & button higher up)
+            VStack(alignment: .leading, spacing: 22) {
+                Text("Do your task!!!! <3")
+                    .font(.title2.bold())
+                    .foregroundStyle(.black)
+                    .padding(.top, 8)
+                
+                VStack(alignment: .leading, spacing: 16) {
+                    Text("Stay focused on your task. If your attention drifts, we'll help you find your way back.")
+                        .font(.body)
+                        .foregroundStyle(.black.opacity(0.65))
+                        .lineSpacing(4)
+                        .fixedSize(horizontal: false, vertical: true)
+                    
+                    Text("Close this app, n enjoy ur work!")
+                        .font(.body)
+                        .foregroundStyle(.black.opacity(0.65))
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                .padding(.bottom, 16)
+                
+                Button {
+                    isConfirmingEnd = true
+                } label: {
                     Text("End Work")
                         .font(.body.weight(.semibold))
-                        .foregroundStyle(BrandColors.onAccent)
+                        .foregroundStyle(.white)
                         .frame(maxWidth: .infinity, minHeight: 56)
-                        .background(BrandColors.accent, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+                        .background(Color(red: 29/255, green: 100/255, blue: 104/255), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
                 }
                 .buttonStyle(.plain)
-                .padding(.bottom, 8)
+                .padding(.bottom, 52) // Raised button higher up
             }
-            .padding(24)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+            .padding(.horizontal, 32)
+            .padding(.top, 36)
+            .frame(maxWidth: .infinity, alignment: .leading)
             .background(
-                Color.gray,
-                in: TopCircleShape()
+                LinearGradient(
+                    colors: [
+                        Color(red: 235/255, green: 245/255, blue: 246/255),
+                        .white
+                    ],
+                    startPoint: .top,
+                    endPoint: .bottom
+                ),
+                in: RoundedRectangle(cornerRadius: 40, style: .continuous)
             )
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(.systemBackground))
+        .background(Color.white)
         .ignoresSafeArea(edges: .bottom)
+    }
+
+    private var fishermanArtwork: Image {
+        if UIImage(named: "MancingBiasa") != nil {
+            return Image("MancingBiasa")
+        } else {
+            return Image("NarekPanceng")
+        }
     }
 
     private var workingArtwork: some View {
@@ -252,9 +375,13 @@ struct HomeView: View {
         } label: {
             Text(startButtonTitle)
                 .font(.body.weight(.semibold))
-                .foregroundStyle(screenTime.isAuthorized ? BrandColors.ink : BrandColors.muted)
+                .foregroundStyle(.white)
                 .frame(maxWidth: .infinity, minHeight: 56)
-                .background(.white, in: Capsule())
+                .background(
+                    Color(red: 29/255, green: 100/255, blue: 104/255)
+                        .opacity(screenTime.isAuthorized ? 1.0 : 0.5),
+                    in: RoundedRectangle(cornerRadius: 14, style: .continuous)
+                )
         }
         .buttonStyle(.plain)
         .disabled(!screenTime.isAuthorized)
@@ -268,53 +395,62 @@ struct HomeView: View {
     // MARK: - Today's recap
 
     private var recapCard: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Text("Today's recap")
-                .font(.headline)
-                .foregroundStyle(.white)
+        NavigationLink {
+            AchievementView()
+        } label: {
+            HStack(spacing: 20) {
+                // Left: Active Master Angler Badge — larger
+                Image("SettingSummary_Badge_Active_MasterAngler")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 80, height: 80)
 
-            HStack(alignment: .top, spacing: 12) {
-                recapTile(
-                    caption: "Look what you did today!",
-                    icon: "fish.fill",
-                    count: recap.committed,
-                )
-                recapTile(
-                    caption: "See how you did",
-                    icon: "trash.fill",
-                    count: recap.missedReturns,
-                )
-            }
-        }
-        .padding(16)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 20, style: .continuous))
-    }
-
-    private func recapTile(caption: String, icon: String, count: Int) -> some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text(caption)
-                .font(.caption2)
-                .foregroundStyle(.white.opacity(0.85))
-                .lineLimit(2, reservesSpace: true)
-
-            HStack(spacing: 10) {
-                Image(systemName: icon)
-                    .font(.title3)
-                    .foregroundStyle(BrandColors.ink)
-
-                VStack(alignment: .leading, spacing: 1) {
-                    Text("\(count)X")
-                        .font(.title3.bold())
+                // Center: Stats
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("Today's Recap")
+                        .font(.headline)
                         .foregroundStyle(BrandColors.ink)
+
+                    HStack(spacing: 16) {
+                        HStack(spacing: 4) {
+                            Text("\(recap.committed)")
+                                .font(.title3.bold())
+                                .foregroundStyle(Color(red: 29/255, green: 100/255, blue: 104/255))
+                            Text("Commit")
+                                .font(.subheadline)
+                                .foregroundStyle(.gray)
+                        }
+
+                        HStack(spacing: 4) {
+                            Text("\(recap.missedReturns)")
+                                .font(.title3.bold())
+                                .foregroundStyle(Color(red: 216/255, green: 125/255, blue: 51/255))
+                            Text("Dismiss")
+                                .font(.subheadline)
+                                .foregroundStyle(.gray)
+                        }
+                    }
+
+                    Text("See full summary")
+                        .font(.caption2)
+                        .foregroundStyle(.gray.opacity(0.8))
                 }
+
+                Spacer()
+
+                // Right: Chevron
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 16, weight: .bold))
+                    .foregroundStyle(.gray.opacity(0.5))
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(12)
-            .background(.white.opacity(0.85),
-                        in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+            .padding(.vertical, 20)
+            .padding(.horizontal, 22)
+            .background(
+                Color(red: 230/255, green: 242/255, blue: 243/255).opacity(0.92),
+                in: RoundedRectangle(cornerRadius: 24, style: .continuous)
+            )
         }
-        .accessibilityElement(children: .combine)
+        .buttonStyle(.plain)
     }
 }
 

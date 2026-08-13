@@ -17,7 +17,9 @@ enum AppGroup {
 
     /// ⚠️ Must exist in the Developer Portal and be enabled on all five targets.
     /// Change this in one place only — see `Docs/SCREENTIME-SETUP.md`.
-    static let identifier = "group.com.berzki.Miracle"
+    /// If switching Apple Developer accounts, update this to match the new App Group
+    /// shown in Signing & Capabilities → App Groups for the main target.
+    static let identifier = "group.com.daffa.miracle"
 
     /// The app's own URL scheme, used for deep links from the Live Activity.
     /// Must match `CFBundleURLSchemes` in the app's Info.plist.

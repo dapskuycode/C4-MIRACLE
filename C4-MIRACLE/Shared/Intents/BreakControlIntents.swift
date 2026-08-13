@@ -6,7 +6,10 @@
 //
 
 import AppIntents
+import ActivityKit
 import Foundation
+import FamilyControls
+import ManagedSettings
 
 /// Buttons for the Live Activity.
 ///
@@ -23,7 +26,7 @@ import Foundation
 ///
 /// Runs entirely inside the Live Activity extension: ending an activity needs nothing beyond
 /// ActivityKit, so no extra entitlement and no app launch.
-struct DismissBreakActivityIntent: AppIntent {
+struct DismissBreakActivityIntent: LiveActivityIntent {
 
     static var title: LocalizedStringResource = "Dismiss"
     static var description = IntentDescription("Hides the break countdown. The break keeps running.")
@@ -37,7 +40,30 @@ struct DismissBreakActivityIntent: AppIntent {
     @MainActor
     func perform() async throws -> some IntentResult {
         SharedStore.log("LiveActivity", "Countdown dismissed by the user.")
-        LiveActivityService.end(from: "LiveActivity")
+        SharedStore.isWorkModeActive = false
+        SharedStore.clearActiveGrant(outcome: .expired)
+        await LiveActivityService.endImmediately(from: "LiveActivity")
+        LocalNotificationService.sendDismissNotification()
+        return .result()
+    }
+}
+
+/// Resumes work mode, exits social media, opens Redire app, and re-blocks distracting apps.
+struct ContinueToWorkIntent: LiveActivityIntent {
+
+    static var title: LocalizedStringResource = "Continue to work"
+    static var description = IntentDescription("Resumes work mode, opens Redire app, and re-blocks distracting apps.")
+    static var openAppWhenRun: Bool = true
+    static var isDiscoverable: Bool = false
+
+    @MainActor
+    func perform() async throws -> some IntentResult {
+        SharedStore.log("LiveActivity", "Continue to work tapped by user.")
+        SharedStore.isWorkModeActive = true
+        SharedStore.breakEnded = nil
+        SharedStore.clearActiveGrant(outcome: .returnedToWork)
+        await LiveActivityService.endImmediately(from: "LiveActivity")
+        LocalNotificationService.sendContinueToWorkNotification()
         return .result()
     }
 }

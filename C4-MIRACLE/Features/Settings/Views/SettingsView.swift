@@ -49,21 +49,35 @@ struct SettingsView: View {
     // MARK: - Header
     
     private var header: some View {
-        ZStack(alignment: .topLeading) {
+        ZStack(alignment: .top) {
             LinearGradient(
                 colors: [BrandColors.accent, BrandColors.homeScrim],
                 startPoint: .topTrailing,
                 endPoint: .bottomLeading
             )
 
+            // Character artwork on bottom right corner
             characterArtwork
                 .scaledToFit()
-                .frame(width: 200, height: 200)
+                .frame(width: 150, height: 150)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
-                .offset(x: 40, y: 26)
+                .offset(x: 25, y: 15)
                 .accessibilityHidden(true)
 
-            HStack(spacing: 14) {
+            // Centered Header Title
+            VStack(spacing: 4) {
+                Text("Settings")
+                    .font(.title.bold())
+                    .foregroundStyle(.white)
+                Text("customize your journey")
+                    .font(.footnote)
+                    .foregroundStyle(.white.opacity(0.9))
+            }
+            .padding(.top, 62)
+            .frame(maxWidth: .infinity, alignment: .center)
+
+            // Back button on top left
+            HStack {
                 Button { dismiss() } label: {
                     Image(systemName: "chevron.left")
                         .font(.system(size: 17, weight: .semibold))
@@ -73,23 +87,13 @@ struct SettingsView: View {
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel("Back")
-                
+
                 Spacer()
-                
-                VStack(alignment: .center, spacing: 2) {
-                    Text("Settings")
-                        .font(.largeTitle.bold())
-                        .foregroundStyle(.white)
-                    Text("costumize your journey")
-                        .font(.footnote)
-                        .foregroundStyle(.white.opacity(0.9))
-                }
-                .frame(maxWidth: 200, alignment: .leading)
             }
             .padding(.horizontal, 20)
             .padding(.top, 56)
         }
-        .frame(height: 250)
+        .frame(height: 220)
         .clipShape(WaveShape())
     }
 

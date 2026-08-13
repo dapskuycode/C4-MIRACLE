@@ -1,0 +1,15 @@
+{
+  "images": [
+    {
+      "filename": "SettingSummary_Badge_Active_MasterAngler.svg",
+      "idiom": "universal"
+    }
+  ],
+  "info": {
+    "author": "xcode",
+    "version": 1
+  },
+  "properties": {
+    "preserves-vector-representation": true
+  }
+}

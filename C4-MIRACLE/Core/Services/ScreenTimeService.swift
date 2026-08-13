@@ -376,6 +376,8 @@ final class ScreenTimeService: ObservableObject {
     func clearShield() {
         store.shield.applications = nil
         store.shield.applicationCategories = nil
+        store.clearAllSettings()
+        ManagedSettingsStore().clearAllSettings()
     }
 
     // MARK: - Break grant
@@ -395,7 +397,8 @@ final class ScreenTimeService: ObservableObject {
         let tokens = selection.applicationTokens
         SharedStore.log("App", "Break granted — ALL \(tokens.count) shielded app(s) unlocked for \(BreakDurations.label(grant.durationSeconds)).")
 
-        scheduleExpiryNotification(for: grant)
+        // Disabled as per user request: "tidak perlu ada notif setelah waktu selesai"
+        // scheduleExpiryNotification(for: grant)
 
         guard !tokens.isEmpty else { return false }
         armReshield(tokens: tokens, seconds: grant.durationSeconds, endsAt: grant.expiresAt)
@@ -495,14 +498,16 @@ final class ScreenTimeService: ObservableObject {
 
     /// Resumes blocking. Called when the user picks "Start Work" — never automatically.
     func resumeWork(reason: String) {
+        SharedStore.isWorkModeActive = true
         SharedStore.breakEnded = nil
         SharedStore.clearActiveGrant(outcome: .returnedToWork)
         LiveActivityService.end(from: "App")
         UNUserNotificationCenter.current()
             .removePendingNotificationRequests(withIdentifiers: [Self.expiryNotificationID])
-        if SharedStore.isWorkModeActive { applyShield() }
+        applyShield()
         center.stopMonitoring([.breakWindow])
         SharedStore.log("App", "Work resumed (\(reason)) — shield applied.")
+        LocalNotificationService.sendContinueToWorkNotification()
     }
 
     /// - Parameter expired: `true` when the break ran out on its own, `false` when the user

@@ -21,6 +21,8 @@ final class AppState: ObservableObject {
     @Published var activeGrant: BreakGrant?
     @Published var lastOutcome: AppLaunchService.Outcome?
 
+    private var backgroundTaskId: UIBackgroundTaskIdentifier = .invalid
+
     init() {
         refresh()
     }
@@ -139,7 +141,10 @@ final class AppState: ObservableObject {
         pendingRequest = nil
         lastOutcome = nil
 
-        LiveActivityService.start(grant: grant)
+        Task { await LiveActivityService.start(grant: grant) }
+        
+        // Start background task timer to manage the countdown and auto-expand when finished
+        startBackgroundBreakTimer(durationSeconds: seconds, appName: grant.appName)
     }
 
     /// Phase 2 — run after the sheet has been dismissed, so the launch isn't competing with a
@@ -196,5 +201,66 @@ final class AppState: ObservableObject {
         SharedStore.pendingRequest = BreakRequest(appName: appName, source: .manual)
         SharedStore.log("App", "Manual test intercept for \"\(appName)\".")
         refresh()
+    }
+
+    // MARK: - Background Timer (Auto-Expand Trigger)
+
+    @MainActor
+    private func startBackgroundBreakTimer(durationSeconds: Int, appName: String) {
+        // End any existing background task just in case
+        if backgroundTaskId != .invalid {
+            UIApplication.shared.endBackgroundTask(backgroundTaskId)
+        }
+
+        // 1. Begin background task on main actor
+        backgroundTaskId = UIApplication.shared.beginBackgroundTask(withName: "BreakTimer") { [weak self] in
+            // Clean up if system expires the task early
+            Task { @MainActor in
+                self?.endBackgroundTimer()
+            }
+        }
+
+        SharedStore.log("App", "Background task started for \(durationSeconds)s break timer (1st expand at 1-min left, 2nd expand at 0:00).")
+
+        // 2. Spawn Task with Task.sleep
+        Task {
+            do {
+                if durationSeconds > 60 {
+                    // Phase 1: Sleep until 1 minute remaining
+                    let timeUntil1MinLeft = durationSeconds - 60
+                    try await Task.sleep(for: .seconds(timeUntil1MinLeft))
+
+                    // 1st Auto-Expand: 1 minute left warning (design unchanged)
+                    await MainActor.run {
+                        LiveActivityService.alertWarning1MinLeft()
+                    }
+
+                    // Phase 2: Sleep for the remaining 60 seconds
+                    try await Task.sleep(for: .seconds(60))
+                } else {
+                    // For short breaks under 1 minute, sleep for full duration
+                    try await Task.sleep(for: .seconds(durationSeconds))
+                }
+
+                // 2nd Auto-Expand: Break time is up (0:00)
+                await MainActor.run {
+                    LiveActivityService.markOver(appName: appName)
+                    self.endBackgroundTimer()
+                }
+            } catch {
+                await MainActor.run {
+                    self.endBackgroundTimer()
+                }
+            }
+        }
+    }
+
+    @MainActor
+    private func endBackgroundTimer() {
+        if backgroundTaskId != .invalid {
+            UIApplication.shared.endBackgroundTask(backgroundTaskId)
+            backgroundTaskId = .invalid
+            SharedStore.log("App", "Background task break timer completed and ended.")
+        }
     }
 }

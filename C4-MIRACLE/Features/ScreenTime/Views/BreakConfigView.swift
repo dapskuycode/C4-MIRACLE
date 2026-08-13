@@ -26,7 +26,12 @@ struct BreakConfigView: View {
     @State private var isSaving = false
 
     private var totalSeconds: Int { minutes * 60 + seconds }
-    private var isValid: Bool { BreakDurations.range.contains(totalSeconds) }
+    private var isTaskNotEmpty: Bool {
+        !nextTask.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    }
+    private var isValid: Bool {
+        totalSeconds > 0 && isTaskNotEmpty
+    }
 
     /// iOS did not identify the app, so nothing can be derived to reopen it. The break still
     /// applies — it just ends with the user back here rather than back in the app.
@@ -36,88 +41,131 @@ struct BreakConfigView: View {
 
     var body: some View {
         VStack(spacing: 0) {
+            // Drag Indicator Handle
+            Capsule()
+                .fill(Color.gray.opacity(0.3))
+                .frame(width: 36, height: 5)
+                .padding(.top, 10)
+                .padding(.bottom, 12)
+
+            // Navigation Top Bar (X / Title / Up Arrow)
+            topBar
+                .padding(.horizontal, 20)
+                .padding(.bottom, 16)
+
             ScrollView {
-                VStack(spacing: 24) {
-                    artwork
-                    header
-                    durationPicker
-                    nextTaskField
+                VStack(alignment: .leading, spacing: 24) {
+                    if unresolved {
+                        Text("iOS didn't identify this app, so it can't be reopened automatically. Your break still applies to every blocked app.")
+                            .font(.caption)
+                            .foregroundStyle(.orange)
+                            .multilineTextAlignment(.center)
+                            .frame(maxWidth: .infinity)
+                    }
+
+                    // Section 1: Set Break Time
+                    setBreakTimeSection
+
+                    // Section 2: Next Task
+                    nextTaskSection
                 }
                 .padding(.horizontal, 20)
-                .padding(.top, 8)
+                .padding(.top, 28) // Push content down into a balanced centered position
             }
             .scrollBounceBehavior(.basedOnSize)
-
-            actions
         }
-        .background(Color(.systemBackground))
+        .background(Color.white)
         .interactiveDismissDisabled(isSaving)
     }
 
-    // MARK: - Sections
+    // MARK: - Top Navigation Bar
 
-    private var artwork: some View {
-        // Generated asset symbol rather than a string, so a renamed asset breaks the build
-        // instead of silently rendering nothing.
-        Image(.fishing)
-            .resizable()
-            .scaledToFit()
-            .frame(maxHeight: 180)
-            .accessibilityHidden(true)
-    }
-
-    private var header: some View {
-        VStack(spacing: 8) {
-            Text("Before you go")
-                .font(.title.bold())
-                .foregroundStyle(BrandColors.ink)
-
-            if unresolved {
-                Text("iOS didn't identify this app, so it can't be reopened automatically. Your break still applies to every blocked app.")
-                    .font(.caption)
-                    .foregroundStyle(.orange)
-                    .multilineTextAlignment(.center)
+    private var topBar: some View {
+        HStack {
+            // Left: Close X Button
+            Button {
+                state.dismissRequest()
+                dismiss()
+            } label: {
+                Image(systemName: "xmark")
+                    .font(.system(size: 16, weight: .bold))
+                    .foregroundStyle(.black)
+                    .frame(width: 44, height: 44)
+                    .background(Color(red: 245/255, green: 245/255, blue: 247/255), in: Circle())
             }
+            .buttonStyle(.plain)
+
+            Spacer()
+
+            // Center Title
+            Text("Plan Your Next Task")
+                .font(.headline.bold())
+                .foregroundStyle(.black)
+
+            Spacer()
+
+            // Right: Submit Up-Arrow Button
+            Button(action: save) {
+                ZStack {
+                    Circle()
+                        .fill(Color(red: 29/255, green: 100/255, blue: 104/255))
+                        .frame(width: 44, height: 44)
+                    
+                    if isSaving {
+                        ProgressView()
+                            .tint(.white)
+                    } else {
+                        Image(systemName: "arrow.up")
+                            .font(.system(size: 18, weight: .bold))
+                            .foregroundStyle(.white)
+                    }
+                }
+            }
+            .buttonStyle(.plain)
+            .disabled(!isValid || isSaving)
+            .opacity(isValid && !isSaving ? 1.0 : 0.4)
         }
     }
 
-    /// Two wheels rather than a stepper, because the design asks for one.
-    ///
-    /// The value is still a plain second count — `BreakDurations` and the DeviceActivity
-    /// scheduling underneath are unchanged.
-    private var durationPicker: some View {
-        VStack(spacing: 4) {
-            HStack(spacing: 10) {
-                wheel(value: $minutes, range: 0...180, unit: "min")
-                Text(":")
-                    .font(.largeTitle.weight(.semibold))
-                    .foregroundStyle(BrandColors.ink)
-                wheel(value: $seconds, range: 0...59, unit: "sec")
-            }
-            .frame(maxWidth: .infinity)
-            .frame(height: 140)
-            .padding(.horizontal, 12)
+    // MARK: - Section 1: Set Break Time
 
-            if totalSeconds < BreakDurations.developmentCeiling {
-                Text("Under a minute is for testing. The usage-based re-block can't be armed below one minute — DeviceActivity thresholds are whole minutes — so a break this short relies on the wall clock alone.")
-                    .font(.caption2)
-                    .foregroundStyle(BrandColors.muted)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 8)
-                    .padding(.bottom, 8)
+    private var setBreakTimeSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Set Break Time")
+                .font(.title3.bold())
+                .foregroundStyle(.black)
+
+            VStack(spacing: 4) {
+                HStack(spacing: 10) {
+                    wheel(value: $minutes, range: 0...180, unit: "min")
+                    Text(":")
+                        .font(.largeTitle.weight(.bold))
+                        .foregroundStyle(.black)
+                    wheel(value: $seconds, range: 0...59, unit: "sec")
+                }
+                .frame(maxWidth: .infinity)
+                .frame(height: 140)
+                .padding(.horizontal, 12)
+
+                if totalSeconds < BreakDurations.developmentCeiling {
+                    Text("Under a minute is for testing. The usage-based re-block can't be armed below one minute — DeviceActivity thresholds are whole minutes — so a break this short relies on the wall clock alone.")
+                        .font(.caption2)
+                        .foregroundStyle(.gray)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 8)
+                        .padding(.bottom, 12)
+                }
             }
+            .background(Color(red: 245/255, green: 245/255, blue: 247/255), in: RoundedRectangle(cornerRadius: 20, style: .continuous))
         }
-        .background(BrandColors.surface, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
     }
 
-    /// `.center` alignment, not `.firstTextBaseline`: a wheel picker's baseline sits at the
-    /// top of its rotating drum, which pushed the unit label up above the numbers.
     private func wheel(value: Binding<Int>, range: ClosedRange<Int>, unit: String) -> some View {
         HStack(alignment: .center, spacing: 6) {
             Picker(unit, selection: value) {
                 ForEach(Array(range), id: \.self) { number in
                     Text(String(format: "%02d", number))
-                        .font(.system(size: 30, weight: .bold, design: .rounded))
+                        .font(.system(size: 32, weight: .bold, design: .rounded))
                         .tag(number)
                 }
             }
@@ -128,69 +176,34 @@ struct BreakConfigView: View {
 
             Text(unit)
                 .font(.footnote)
-                .foregroundStyle(BrandColors.muted)
+                .foregroundStyle(.gray)
         }
         .accessibilityElement(children: .combine)
         .accessibilityLabel(unit == "min" ? "Minutes" : "Seconds")
     }
 
-    private var nextTaskField: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text("Next task after break time")
-                .font(.subheadline.weight(.semibold))
-                .foregroundStyle(BrandColors.ink)
+    // MARK: - Section 2: Next Task
 
-            TextField("Next Task", text: $nextTask, axis: .vertical)
-                .lineLimit(1...3)
-                .padding(14)
-                .frame(minHeight: 44)
-                .background(BrandColors.surface,
-                            in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+    private var nextTaskSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Next Task")
+                .font(.title3.bold())
+                .foregroundStyle(.black)
+
+            TextField("Creating Pitch Deck", text: $nextTask)
+                .multilineTextAlignment(.leading)
+                .font(.body)
+                .foregroundStyle(.black)
+                .padding(.horizontal, 16)
+                .frame(height: 56)
+                .background(Color(red: 245/255, green: 245/255, blue: 247/255), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
     }
 
-    private var actions: some View {
-        HStack(spacing: 12) {
-            Button {
-                state.dismissRequest()
-                dismiss()
-            } label: {
-                Text("Cancel")
-                    .font(.body.weight(.semibold))
-                    .foregroundStyle(BrandColors.muted)
-                    .frame(maxWidth: .infinity, minHeight: 52)
-                    .background(BrandColors.surface,
-                                in: RoundedRectangle(cornerRadius: 14, style: .continuous))
-            }
-            .buttonStyle(.plain)
-
-            Button(action: save) {
-                HStack(spacing: 8) {
-                    Text("Take a Break")
-                    if isSaving { ProgressView().tint(BrandColors.onAccent) }
-                }
-                .font(.body.weight(.semibold))
-                .foregroundStyle(BrandColors.onAccent)
-                .frame(maxWidth: .infinity, minHeight: 52)
-                .background(BrandColors.accent.opacity(isValid && !isSaving ? 1 : 0.4),
-                            in: RoundedRectangle(cornerRadius: 14, style: .continuous))
-            }
-            .buttonStyle(.plain)
-            .disabled(!isValid || isSaving)
-        }
-        .padding(.horizontal, 20)
-        .padding(.top, 12)
-        .padding(.bottom, 8)
-        .background(.bar)
-    }
-
-    // MARK: -
+    // MARK: - Save Logic
 
     private func save() {
         isSaving = true
-        // Commit, close the sheet, *then* launch. See AppState for why the launch cannot
-        // happen in the same breath as the unshield.
         state.commitBreak(request: request, seconds: totalSeconds, nextTask: nextTask)
         dismiss()
         Task {

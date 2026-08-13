@@ -55,7 +55,6 @@ struct SettingsView: View {
                 startPoint: .topTrailing,
                 endPoint: .bottomLeading
             )
-
             // Character artwork on bottom right corner
             characterArtwork
                 .scaledToFit()
@@ -87,11 +86,10 @@ struct SettingsView: View {
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel("Back")
-
                 Spacer()
             }
-            .padding(.horizontal, 20)
-            .padding(.top, 56)
+            .padding(.leading, 20)
+            .padding(.top, 52)
         }
         .frame(height: 220)
         .clipShape(WaveShape())
@@ -262,16 +260,8 @@ struct SettingsView: View {
 
 // MARK: - Header shape
 
-/// The rippled bottom edge of the settings header.
-///
-/// A sine wave rather than hand-placed Bézier curves: `ripples` and `amplitude` then say
-/// exactly what the edge looks like, and an integer ripple count guarantees the curve meets
-/// both corners at the same height instead of leaving a step.
 private struct WaveShape: Shape {
-
-    /// Full crests across the width.
     var ripples: Double = 5
-    /// How far a crest rises above the trough, in points.
     var amplitude: CGFloat = 7
 
     func path(in rect: CGRect) -> Path {
